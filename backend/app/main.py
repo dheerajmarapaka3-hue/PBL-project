@@ -1,9 +1,14 @@
 import os
+import mimetypes
 from contextlib import asynccontextmanager
 from pathlib import Path
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+
+# Ensure cross-platform MIME type recognition for media streaming
+mimetypes.add_type("image/webp", ".webp")
+mimetypes.add_type("image/svg+xml", ".svg")
 
 from app.config import settings
 from app.database import Base, engine
