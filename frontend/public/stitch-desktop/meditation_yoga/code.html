@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface-bright":"#faf8ff","on-primary-container":"#f5fff7","on-secondary-fixed":"#00201d","on-secondary-fixed-variant":"#005049","primary-fixed":"#85f8c4","surface-container-lowest":"#ffffff","primary-container":"#00855d","tertiary-container":"#007bb9","outline-variant":"#bccac0","outline":"#6d7a72","surface-variant":"#dae2fd","on-primary":"#ffffff","on-background":"#131b2e","secondary-fixed-dim":"#6bd8cb","surface":"#faf8ff","surface-container-low":"#f2f3ff","on-secondary":"#ffffff","surface-container":"#eaedff","inverse-primary":"#68dba9","on-primary-fixed":"#002114","primary":"#006948","secondary":"#006a61","tertiary-fixed":"#cce5ff","secondary-container":"#86f2e4","on-secondary-container":"#006f66","tertiary-fixed-dim":"#93ccff","primary-fixed-dim":"#68dba9","tertiary":"#006194","error-container":"#ffdad6","inverse-surface":"#283044","secondary-fixed":"#89f5e7","inverse-on-surface":"#eef0ff","background":"#faf8ff","surface-dim":"#d2d9f4","on-tertiary-fixed-variant":"#004b73","error":"#ba1a1a","surface-tint":"#006c4a","on-primary-fixed-variant":"#005137","on-error-container":"#93000a","on-tertiary-container":"#fdfcff","on-tertiary-fixed":"#001d31","on-surface":"#131b2e","on-surface-variant":"#3d4a42","surface-container-highest":"#dae2fd","on-error":"#ffffff","on-tertiary":"#ffffff","surface-container-high":"#e2e7ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-md":"1rem","margin-desktop":"3rem","margin":"1.25rem","space-lg":"1.5rem","gutter":"1rem","gutter-desktop":"2rem","margin-tablet":"2rem","space-sm":"0.5rem","gutter-tablet":"1.5rem","space-xs":"0.25rem","space-xl":"2rem"},"fontFamily":{"body-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"metric-val":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"display-lg":["44px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"800"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"700"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"800"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"metric-val":["28px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"800"}],"title-md":["18px",{"lineHeight":"26px","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-space-lg pb-space-lg flex items-center gap-space-sm"><img alt="HealthMate AI brand mark featuring a stylized heart fused with a vibrant vitality spark/cross emblem, surrounded by a smooth glassmorphism glow in mint green, ocean teal, and subtle coral accent.. Brand logo. - Primary color: #059669
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/d/1Zt-jL151eUv8194f47rC8s00j19n_hBv"/><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface leading-tight">HealthMate</span><span class="font-label-sm text-label-sm text-secondary leading-none">AI Companion</span></div></div><div class="px-space-md mb-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline">Core Navigation</span></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary-container text-on-primary-container shadow-[0_8px_20px_-4px_rgba(5,150,105,0.25)] font-label-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="ai-assistant" href="#"><span class="material-symbols-outlined text-[20px]">smart_toy</span><span>AI Assistant</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="health-tracking" href="#"><span class="material-symbols-outlined text-[20px]">vital_signs</span><span>Health Tracking</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="medical-reports" href="#"><span class="material-symbols-outlined text-[20px]">clinical_notes</span><span>Medical Reports</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="medicines" href="#"><span class="material-symbols-outlined text-[20px]">medication</span><span>Medicines</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="daily-routines" href="#"><span class="material-symbols-outlined text-[20px]">calendar_today</span><span>Daily Routines</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="workouts" href="#"><span class="material-symbols-outlined text-[20px]">fitness_center</span><span>Workouts</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="nutrition" href="#"><span class="material-symbols-outlined text-[20px]">nutrition</span><span>Nutrition</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl transition-all bg-primary-container text-on-primary-container shadow-[0_8px_20px_-4px_rgba(5,150,105,0.25)] font-label-lg" data-path="meditation" href="#"><span class="material-symbols-outlined text-[20px]">self_improvement</span><span>Meditation &amp; Yoga</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="profile" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span>Profile &amp; Settings</span></a></nav></div><div class="px-space-md"><div class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface">Care Plan</span><span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-space-xs py-0.5 rounded-full">Active</span></div><p class="font-label-sm text-label-sm text-on-surface-variant">Personalized telemetry sync enabled</p></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-xl flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full pl-10 pr-space-md py-2 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary" placeholder="Search health metrics, labs, logs..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Live Telemetry</span></div><span class="font-label-sm text-label-sm px-space-sm py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full">Demo Mode</span><button class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Dynamic Atmospheric Glow Underlay (Self-contained) -->
+<div class="relative w-full px-space-desktop py-space-xl overflow-hidden">
+<div class="absolute -top-32 -left-20 w-96 h-96 rounded-full bg-secondary-container/30 blur-3xl pointer-events-none"></div>
+<div class="absolute top-48 right-12 w-80 h-80 rounded-full bg-tertiary-fixed/30 blur-3xl pointer-events-none"></div>
+<!-- Header & Serene Status Banner -->
+<header class="relative flex flex-col md:flex-row md:items-end justify-between gap-space-lg mb-space-xl">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex items-center gap-space-sm mb-1">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">spa</span>
+            Parasympathetic Sync Active
+          </span>
+<span class="text-outline font-label-sm text-label-sm">•</span>
+<span class="text-outline font-label-sm text-label-sm">Demo Feed: Biometric Stream 04</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Mindfulness &amp; Somatic Recovery</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Circadian breathwork, parasympathetic activation, and neuro-guided restorative asanas</p>
+</div>
+<!-- Quick Session Badges & Soundscape Bar -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-3 px-4 py-2.5 rounded-full bg-surface-container-lowest shadow-sm backdrop-blur-md">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+</span>
+<div class="flex flex-col leading-none">
+<span class="font-label-sm text-label-sm text-outline">Streak</span>
+<span class="font-label-lg text-label-lg text-on-surface">5-Day Zen</span>
+</div>
+</div>
+<div class="flex items-center gap-3 px-4 py-2.5 rounded-full bg-surface-container-lowest shadow-sm backdrop-blur-md">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">timelapse</span>
+</span>
+<div class="flex flex-col leading-none">
+<span class="font-label-sm text-label-sm text-outline">Mindful Time</span>
+<span class="font-label-lg text-label-lg text-on-surface">48 mins today</span>
+</div>
+</div>
+<button class="flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-all shadow-sm" id="openSoundscapeSelectorBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">headphones</span>
+<span class="font-label-lg text-label-lg">Soundscapes (432Hz)</span>
+<span class="material-symbols-outlined text-[16px] text-outline">keyboard_arrow_down</span>
+</button>
+</div>
+</header>
+<!-- Segmented Navigation Pills -->
+<nav aria-label="Meditation Categories" class="flex items-center gap-space-xs overflow-x-auto pb-2 mb-space-xl scrollbar-none">
+<button class="category-pill active px-5 py-2.5 rounded-full bg-primary text-on-primary font-label-lg text-label-lg shadow-sm transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">all_inclusive</span>
+<span>All Sessions</span>
+</button>
+<button class="category-pill px-5 py-2.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">air</span>
+<span>Breathing Exercises</span>
+</button>
+<button class="category-pill px-5 py-2.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">self_improvement</span>
+<span>Guided Meditation</span>
+</button>
+<button class="category-pill px-5 py-2.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">accessibility_new</span>
+<span>Somatic Yoga</span>
+</button>
+<button class="category-pill px-5 py-2.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">bedtime</span>
+<span>Sleep Wind-Down</span>
+</button>
+</nav>
+<!-- 12-Column Desktop Grid Architecture (7 cols / 5 cols) -->
+<div class="grid grid-cols-12 gap-gutter-desktop items-start">
+<!-- LEFT COLUMN: Featured Cadence Engine & Directory (7 Columns) -->
+<section class="col-span-12 lg:col-span-7 flex flex-col gap-space-xl">
+<!-- Featured Interactive Coherence Breathing Card -->
+<article class="relative w-full rounded-xl bg-surface-container-lowest p-space-lg shadow-xl overflow-hidden">
+<div class="absolute top-0 right-0 w-80 h-80 rounded-full bg-gradient-to-bl from-secondary-container/20 via-tertiary-fixed/10 to-transparent pointer-events-none"></div>
+<!-- Header of Card -->
+<div class="relative flex items-start justify-between gap-4 mb-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wide">Featured Cadence</span>
+<span class="text-outline font-label-sm text-label-sm">Nervous System Reset</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1">Coherence Box Breathing</h2>
+<span class="font-body-md text-body-md text-on-surface-variant">4-4-4-4 Square protocol for sympathetic down-regulation</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+              Live Biofeedback
+            </div>
+</div>
+<!-- Circular Breath Cadence Interactive Area -->
+<div class="relative flex flex-col items-center justify-center py-6">
+<!-- Pulsing Halo Animator rings -->
+<div class="relative flex items-center justify-center w-72 h-72">
+<div class="absolute inset-0 rounded-full bg-gradient-to-tr from-secondary-container/30 to-tertiary-container/20 transition-all duration-1000 scale-100 blur-sm" id="breathRingOuter"></div>
+<div class="absolute w-56 h-56 rounded-full bg-secondary-container/40 transition-all duration-1000 scale-95 backdrop-blur-sm" id="breathRingMid"></div>
+<!-- Core Dynamic Circle -->
+<div class="relative z-10 w-44 h-44 rounded-full bg-surface-container-lowest shadow-lg flex flex-col items-center justify-center p-4 text-center transition-transform duration-700" id="breathCore">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold" id="breathPhaseLabel">Inhale</span>
+<span class="font-metric-val text-metric-val text-on-surface my-0.5" id="breathCount">4</span>
+<span class="font-label-sm text-label-sm text-outline">Target: 4s</span>
+</div>
+<!-- SVG Progress Indicator Ring -->
+<svg class="absolute inset-0 w-full h-full -rotate-90 pointer-events-none" viewbox="0 0 288 288">
+<circle class="text-surface-container-high" cx="144" cy="144" fill="none" r="130" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-secondary" cx="144" cy="144" fill="none" id="breathProgressCircle" r="130" stroke="currentColor" stroke-dasharray="816" stroke-dashoffset="240" stroke-linecap="round" stroke-width="5"></circle>
+</svg>
+</div>
+<!-- Phase Indicator Pills -->
+<div class="flex items-center gap-2 mt-6">
+<span class="phase-indicator active px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Inhale 4s</span>
+<span class="text-outline">•</span>
+<span class="phase-indicator px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Hold 4s</span>
+<span class="text-outline">•</span>
+<span class="phase-indicator px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Exhale 4s</span>
+<span class="text-outline">•</span>
+<span class="phase-indicator px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Hold 4s</span>
+</div>
+</div>
+<!-- Audio Waveform / Session Timeline Controls -->
+<div class="mt-4 pt-space-md bg-surface-container-low/70 rounded-xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">music_note</span>
+<span>Active Track: <strong class="text-on-surface font-semibold">Rainforest Rain &amp; 432Hz Binaural Beats</strong></span>
+</div>
+<span class="font-mono text-outline">08:24 / 12:00</span>
+</div>
+<!-- Waveform Scrub Bar -->
+<div class="relative w-full h-2 bg-surface-container-high rounded-full overflow-hidden cursor-pointer">
+<div class="absolute left-0 top-0 bottom-0 w-[70%] bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+</div>
+<!-- Interactive Media Controls Bar -->
+<div class="flex flex-wrap items-center justify-between pt-2 gap-4">
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">replay_10</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-primary hover:bg-primary-container text-on-primary flex items-center justify-center shadow-md transition-all active:scale-95" id="playPauseBreathBtn" type="button">
+<span class="material-symbols-outlined text-[24px]" id="playPauseIcon">pause</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">forward_10</span>
+</button>
+</div>
+<!-- Cadence Speed Pill Toggle -->
+<div class="flex items-center gap-1 bg-surface-container p-1 rounded-full">
+<span class="px-2 text-label-sm font-label-sm text-outline">Cadence:</span>
+<button class="px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-surface-container-lowest text-on-surface shadow-xs" type="button">1.0x</button>
+<button class="px-2.5 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface" type="button">1.2x</button>
+<button class="px-2.5 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface" type="button">0.8x</button>
+</div>
+<!-- Ambient Toggle -->
+<button class="flex items-center gap-2 text-label-sm font-label-sm text-secondary hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+<span>Mix Volume: 65%</span>
+</button>
+</div>
+</div>
+<!-- Biometric Impact Footnote -->
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">vital_signs</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Biometric Impact Projection</span>
+<span class="font-label-sm text-label-sm text-outline">Validated against 14 baseline somatic sessions</span>
+</div>
+</div>
+<div class="flex items-center gap-4 text-right">
+<div>
+<span class="block font-headline-sm text-headline-sm text-primary">-8 BPM</span>
+<span class="font-label-sm text-label-sm text-outline">Resting Pulse</span>
+</div>
+<div class="h-8 w-px bg-surface-variant"></div>
+<div>
+<span class="block font-headline-sm text-headline-sm text-tertiary">89/100</span>
+<span class="font-label-sm text-label-sm text-outline">Stress Resilience</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Curated Yoga & Asana Class Directory -->
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Somatic &amp; Asana Flows</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Neuromuscular realignment and gentle musculoskeletal tension release</p>
+</div>
+<!-- Difficulty Filters -->
+<div class="flex items-center gap-1.5 p-1 bg-surface-container rounded-full">
+<button class="filter-pill active px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface shadow-xs font-label-sm text-label-sm" type="button">All</button>
+<button class="filter-pill px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button">Beginner</button>
+<button class="filter-pill px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button">Intermediate</button>
+<button class="filter-pill px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button">Advanced</button>
+</div>
+</div>
+<!-- Class Cards Collection -->
+<div class="grid grid-cols-1 gap-space-md">
+<!-- Flow Item 1 -->
+<article class="flex flex-col sm:flex-row items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low/50 shadow-sm transition-all group">
+<div class="relative w-full sm:w-48 h-36 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A serene woman practicing restorative yoga spine stretch on a natural cork yoga mat inside a luminous sunlit studio filled with lush monstera plants, soft morning mint and teal illumination, ultra photorealistic style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdHrBliOqyfjzXNWeHpL41eEYGdl84GXlePs40NeE_9fbjw3K179BxDWd2fg23BSrx1nSR_aOZ8OtPCMuUnFmaL8ZvBEGr1RveLEH3_3GCentjzixlSxY15tnMvOuvI5-glr8SDUFQ_qxRj4nzXJWz0mXPfMmVmLhT3kmlDzHsRNPpqAksCD5L26lXLluVxjGxZ5q32CQOivvJkDVyggbpqnMk_iApb5vgT-inyA2eDExOUSao90Bd"/>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded-md bg-inverse-surface/75 text-inverse-on-surface font-label-sm text-label-sm backdrop-blur-sm">15 mins</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between h-full py-1">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">Beginner</span>
+<span class="text-outline font-label-sm text-label-sm">Mobility &amp; Posture</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface truncate">Morning Spine Awakening</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-0.5">Cat-cow rhythm, thoracic spirals, and gentle cobra extensions to decompress vertebrae after deep sleep.</p>
+</div>
+<div class="flex items-center justify-between pt-3 mt-1">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-secondary font-label-sm text-label-sm">EV</div>
+<span class="font-label-sm text-label-sm text-outline">Elena Vance • Iyengar Yoga Cert.</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm transition-all shadow-sm" type="button">
+                    Begin Flow
+                  </button>
+</div>
+</div>
+</article>
+<!-- Flow Item 2 -->
+<article class="flex flex-col sm:flex-row items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low/50 shadow-sm transition-all group">
+<div class="relative w-full sm:w-48 h-36 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An athletic man in a focused Warrior II yoga pose against a panoramic window overlooking a tranquil misty turquoise ocean, ambient soft morning sunlight, calming minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZR4GJ7dD_9diI28-ZxBp9HrzJQctnWPOqmEJgkxCtTS83ju0ofXBvEvUxEc8i1d-l1qASO6eWphYcrZkcx3WpSm82Nj49rrEMWO-vpUfdKlaoEIVkvpFVrp_5sWgRN2dnKN5oekncsza-fwLPzTZdgXOWBgJqlsOefCb4y6TWdG98p7_bCeoaIe9jeKUdWWdc_Eit-IOMbV_84fRSJrxejtNynQcCFaCZS_67rvYGDMvKsq2OwOGy"/>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded-md bg-inverse-surface/75 text-inverse-on-surface font-label-sm text-label-sm backdrop-blur-sm">25 mins</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between h-full py-1">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">Intermediate</span>
+<span class="text-outline font-label-sm text-label-sm">Dynamic Stamina</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface truncate">Vinyasa Solar Flow</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-0.5">High-energy continuous breath-linked transitions to build cardiovascular core heat and improve joint stability.</p>
+</div>
+<div class="flex items-center justify-between pt-3 mt-1">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-tertiary font-label-sm text-label-sm">MC</div>
+<span class="font-label-sm text-label-sm text-outline">Marcus Chen • Movement Physiology</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm transition-all shadow-sm" type="button">
+                    Begin Flow
+                  </button>
+</div>
+</div>
+</article>
+<!-- Flow Item 3 -->
+<article class="flex flex-col sm:flex-row items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low/50 shadow-sm transition-all group">
+<div class="relative w-full sm:w-48 h-36 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A tranquil low-angle close-up of folded yoga bolster and restorative pigeon pose in a warm ambient zen room with lavender candlelight and smooth warm wood tones, soothing serene atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOU9t5u84mrtgPWpEXoEltYcwCXFFTktSU8HGA36XF3Trk_9MXH75I-f6MkHChdXKDQB2wsHHQfcxy-SgKjwfkJPDWQ8i71yz6NJzddg65c54QQiwMdTnBBhNrgPeLxwB-WP6hmpXmzNp_sBvwb76unyaT0j8586pxzbWIMlb0TO4u5tIxl8H1Hbekuh5gDiFP5LEbOO1DYnfri_Syb-qlZnJ5pizrufaagHzcFMKad_OnEBixDXRm"/>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded-md bg-inverse-surface/75 text-inverse-on-surface font-label-sm text-label-sm backdrop-blur-sm">20 mins</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between h-full py-1">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">All Levels</span>
+<span class="text-outline font-label-sm text-label-sm">Fascial Release</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface truncate">Restorative Hip &amp; Lumbar Decompression</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-0.5">Passive long holds with props to target deep hip flexors, psoas release, and soothe lumbar tightness.</p>
+</div>
+<div class="flex items-center justify-between pt-3 mt-1">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-primary font-label-sm text-label-sm">HM</div>
+<span class="font-label-sm text-label-sm text-outline">HealthMate AI Somatic Coach</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm transition-all shadow-sm" type="button">
+                    Begin Flow
+                  </button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- RIGHT COLUMN: Telemetry, Soundscapes, and AI Calibration (5 Columns) -->
+<aside class="col-span-12 lg:col-span-5 flex flex-col gap-space-xl">
+<!-- Autonomic Nervous System Telemetry Panel -->
+<section class="p-space-lg rounded-xl bg-surface-container-lowest shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Neurological Telemetry</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Vagal Tone &amp; HRV</h2>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+              Live Synced
+            </div>
+</div>
+<!-- Gauge and Key Metrics -->
+<div class="grid grid-cols-2 gap-space-md pt-2">
+<!-- Vagal Tone Metric -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Vagal Tone</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">psychology</span>
+</div>
+<div class="my-2">
+<span class="font-metric-val text-metric-val text-on-surface">78.4</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">idx</span>
+</div>
+<div class="flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+14% this week</span>
+</div>
+</div>
+<!-- HRV Metric -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Real-time HRV</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">favorite</span>
+</div>
+<div class="my-2">
+<span class="font-metric-val text-metric-val text-on-surface">62</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">ms (rMSSD)</span>
+</div>
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Optimal Parasympathetic</span>
+</div>
+</div>
+</div>
+<!-- Inline SVG Sparkline Trend: Demonstration Data -->
+<div class="flex flex-col gap-1.5 bg-surface-container-low p-space-md rounded-xl">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>7-Day Coherence Recovery Wave</span>
+<span class="text-outline">Demonstration Data</span>
+</div>
+<svg class="w-full h-20 overflow-visible mt-2" preserveaspectratio="none" viewbox="0 0 320 60">
+<defs>
+<lineargradient id="hrvGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#006948" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#006948" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<path d="M 0,42 Q 25,32 50,38 T 100,24 T 150,30 T 200,16 T 250,20 T 320,8 L 320,60 L 0,60 Z" fill="url(#hrvGrad)"></path>
+<path d="M 0,42 Q 25,32 50,38 T 100,24 T 150,30 T 200,16 T 250,20 T 320,8" fill="none" stroke="#006948" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Highlight node -->
+<circle class="animate-pulse" cx="320" cy="8" fill="#006948" r="4"></circle>
+</svg>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-1">
+<span>Mon</span>
+<span>Tue</span>
+<span>Wed</span>
+<span>Thu</span>
+<span>Fri</span>
+<span>Sat</span>
+<span class="text-primary font-bold">Today (High)</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">watch</span>
+<span>Synced via Apple HealthKit &amp; Oura Ring API (Active Stream)</span>
+</div>
+</section>
+<!-- Ambient Soundscapes Library -->
+<section class="p-space-lg rounded-xl bg-surface-container-lowest shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Acoustic Therapy</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Binaural &amp; Ambient Library</h2>
+</div>
+<button class="text-secondary font-label-sm text-label-sm hover:underline" type="button">Explore 42 tracks</button>
+</div>
+<!-- Soundscape Track Cards -->
+<div class="flex flex-col gap-space-sm">
+<!-- Track 1 -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all group">
+<div class="flex items-center gap-3">
+<button class="w-9 h-9 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center transition-transform group-hover:scale-105" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Pacific Ocean Swell</span>
+<span class="font-label-sm text-label-sm text-outline">Beta Wave • 14Hz Cognitive Flow</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Continuous</span>
+</div>
+<!-- Track 2 -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all group">
+<div class="flex items-center gap-3">
+<button class="w-9 h-9 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center transition-transform group-hover:scale-105" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Nordic Forest Canopy</span>
+<span class="font-label-sm text-label-sm text-outline">Alpha Wave • 10Hz Deep Calm</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">45 min loop</span>
+</div>
+<!-- Track 3 -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all group">
+<div class="flex items-center gap-3">
+<button class="w-9 h-9 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center transition-transform group-hover:scale-105" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Tibetan Singing Bowls</span>
+<span class="font-label-sm text-label-sm text-outline">Theta Wave • 6Hz Somatic Release</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">30 min loop</span>
+</div>
+</div>
+</section>
+<!-- AI Cadence Customizer Bento Card -->
+<section class="p-space-lg rounded-xl bg-gradient-to-br from-surface-container to-surface-container-high shadow-lg flex flex-col gap-space-md relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-40 h-40 rounded-full bg-secondary-fixed-dim/20 blur-2xl pointer-events-none"></div>
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">auto_awesome</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-title-md text-title-md text-on-surface">Autonomous AI Cadence Adaptor</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                HealthMate actively modulates your inhale-to-exhale ratios in real-time as your biometric respiratory sinus arrhythmia (RSA) shifts.
+              </p>
+</div>
+</div>
+<div class="p-3 bg-surface-container-lowest/80 rounded-lg backdrop-blur-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">tune</span>
+<span class="font-label-sm text-label-sm text-on-surface">Dynamic Pace Adjustment</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-primary">Automated: ON</span>
+</div>
+<button class="w-full py-3 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md transition-all active:scale-[0.98] flex items-center justify-center gap-2" id="calibratePaceBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">sync</span>
+<span>Calibrate Pace to Current Pulse</span>
+</button>
+</section>
+</aside>
+</div>
+</div>
+</div>
+<script>
+  // Interactive Cadence Logic for Box Breathing Animator
+  (function initCadenceEngine() {
+    const phases = [
+      { name: "Inhale", count: 4, label: "Inhale 4s", scale: "scale-110", ringScale: "scale-110", color: "#006948" },
+      { name: "Hold", count: 4, label: "Hold 4s", scale: "scale-105", ringScale: "scale-105", color: "#006a61" },
+      { name: "Exhale", count: 4, label: "Exhale 4s", scale: "scale-90", ringScale: "scale-90", color: "#007bb9" },
+      { name: "Hold", count: 4, label: "Hold 4s", scale: "scale-95", ringScale: "scale-95", color: "#6d7a72" }
+    ];
+
+    let currentPhaseIndex = 0;
+    let currentSeconds = 4;
+    let isRunning = true;
+    let timer = null;
+
+    const countEl = document.getElementById("breathCount");
+    const labelEl = document.getElementById("breathPhaseLabel");
+    const coreEl = document.getElementById("breathCore");
+    const ringOuterEl = document.getElementById("breathRingOuter");
+    const playPauseBtn = document.getElementById("playPauseBreathBtn");
+    const playPauseIcon = document.getElementById("playPauseIcon");
+    const phaseIndicators = document.querySelectorAll(".phase-indicator");
+
+    function tick() {
+      if (!isRunning) return;
+
+      currentSeconds--;
+      if (currentSeconds <= 0) {
+        currentPhaseIndex = (currentPhaseIndex + 1) % phases.length;
+        currentSeconds = phases[currentPhaseIndex].count;
+        applyPhase(phases[currentPhaseIndex], currentPhaseIndex);
+      } else {
+        if (countEl) countEl.textContent = currentSeconds;
+      }
+    }
+
+    function applyPhase(phase, idx) {
+      if (labelEl) labelEl.textContent = phase.name;
+      if (countEl) countEl.textContent = phase.count;
+
+      // Animate core pulsing
+      if (coreEl) {
+        coreEl.className = "relative z-10 w-44 h-44 rounded-full bg-surface-container-lowest shadow-lg flex flex-col items-center justify-center p-4 text-center transition-all duration-1000 " + phase.scale;
+      }
+      if (ringOuterEl) {
+        ringOuterEl.className = "absolute inset-0 rounded-full bg-gradient-to-tr from-secondary-container/40 to-tertiary-container/30 transition-all duration-1000 blur-sm " + phase.ringScale;
+      }
+
+      // Update Phase Badge highlights
+      phaseIndicators.forEach((badge, i) => {
+        if (i === idx) {
+          badge.className = "phase-indicator px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold transition-all";
+        } else {
+          badge.className = "phase-indicator px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm transition-all";
+        }
+      });
+    }
+
+    if (playPauseBtn && playPauseIcon) {
+      playPauseBtn.addEventListener("click", () => {
+        isRunning = !isRunning;
+        playPauseIcon.textContent = isRunning ? "pause" : "play_arrow";
+      });
+    }
+
+    timer = setInterval(tick, 1000);
+
+    // Interactive category pill selection
+    const categoryPills = document.querySelectorAll(".category-pill");
+    categoryPills.forEach(pill => {
+      pill.addEventListener("click", () => {
+        categoryPills.forEach(p => {
+          p.className = "category-pill px-5 py-2.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg transition-all flex items-center gap-2";
+        });
+        pill.className = "category-pill active px-5 py-2.5 rounded-full bg-primary text-on-primary font-label-lg text-label-lg shadow-sm transition-all flex items-center gap-2";
+      });
+    });
+
+    // Difficulty filter pill toggle
+    const filterPills = document.querySelectorAll(".filter-pill");
+    filterPills.forEach(pill => {
+      pill.addEventListener("click", () => {
+        filterPills.forEach(f => {
+          f.className = "filter-pill px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm";
+        });
+        pill.className = "filter-pill active px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface shadow-xs font-label-sm text-label-sm";
+      });
+    });
+
+    // Calibrate Button tactile feedback
+    const calibrateBtn = document.getElementById("calibratePaceBtn");
+    if (calibrateBtn) {
+      calibrateBtn.addEventListener("click", function() {
+        const originalContent = this.innerHTML;
+        this.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>Reading Vagal Coherence...</span>';
+        setTimeout(() => {
+          this.innerHTML = '<span class="material-symbols-outlined text-[20px]">done</span><span>Optimized to 4.5s Cadence</span>';
+          setTimeout(() => {
+            this.innerHTML = originalContent;
+          }, 2400);
+        }, 1200);
+      });
+    }
+  })();
+</script></main></div></body></html>

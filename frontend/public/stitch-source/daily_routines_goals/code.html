@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#faf8ff;font-family:'Plus Jakarta Sans',sans-serif;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'surface-container-lowest': '#ffffff', 'on-primary-fixed-variant': '#005137', 'error': '#ba1a1a', 'background': '#faf8ff', 'tertiary-container': '#007bb9', 'surface-container-high': '#e2e7ff', 'on-tertiary': '#ffffff', 'on-secondary-fixed-variant': '#005049', 'tertiary-fixed': '#cce5ff', 'on-secondary-fixed': '#00201d', 'surface': '#faf8ff', 'on-tertiary-container': '#fdfcff', 'on-primary-container': '#f5fff7', 'outline': '#6d7a72', 'surface-container-highest': '#dae2fd', 'error-container': '#ffdad6', 'surface-dim': '#d2d9f4', 'on-secondary': '#ffffff', 'inverse-surface': '#283044', 'surface-bright': '#faf8ff', 'on-background': '#131b2e', 'on-surface': '#131b2e', 'secondary-fixed': '#89f5e7', 'surface-container': '#eaedff', 'primary-fixed-dim': '#68dba9', 'secondary': '#006a61', 'on-primary-fixed': '#002114', 'surface-container-low': '#f2f3ff', 'on-error': '#ffffff', 'secondary-container': '#86f2e4', 'surface-variant': '#dae2fd', 'on-tertiary-fixed': '#001d31', 'on-secondary-container': '#006f66', 'secondary-fixed-dim': '#6bd8cb', 'primary-fixed': '#85f8c4', 'on-surface-variant': '#3d4a42', 'surface-tint': '#006c4a', 'on-primary': '#ffffff', 'on-tertiary-fixed-variant': '#004b73', 'primary-container': '#00855d', 'tertiary-fixed-dim': '#93ccff', 'inverse-on-surface': '#eef0ff', 'outline-variant': '#bccac0', 'tertiary': '#006194', 'primary': '#006948', 'inverse-primary': '#68dba9', 'on-error-container': '#93000a' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, 'spacing': { 'gutter-tablet': '1.5rem', 'margin-tablet': '2rem', 'space-xs': '0.25rem', 'space-xl': '2rem', 'space-md': '1rem', 'space-sm': '0.5rem', 'space-lg': '1.5rem', 'gutter': '1rem', 'gutter-desktop': '2rem', 'margin-desktop': '3rem', 'margin': '1.25rem' }, 'fontFamily': { 'title-md': ['Plus Jakarta Sans'], 'label-sm': ['Plus Jakarta Sans'], 'body-md': ['Plus Jakarta Sans'], 'headline-lg': ['Plus Jakarta Sans'], 'headline-lg-mobile': ['Plus Jakarta Sans'], 'display-lg': ['Plus Jakarta Sans'], 'metric-val': ['Plus Jakarta Sans'], 'display-lg-mobile': ['Plus Jakarta Sans'], 'label-lg': ['Plus Jakarta Sans'], 'headline-sm': ['Plus Jakarta Sans'], 'headline-md': ['Plus Jakarta Sans'], 'body-lg': ['Plus Jakarta Sans'] }, 'fontSize': { 'title-md': ['18px', { lineHeight: '26px', fontWeight: '600' }], 'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '600' }], 'body-md': ['14px', { lineHeight: '22px', fontWeight: '400' }], 'headline-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.02em', fontWeight: '700' }], 'headline-lg-mobile': ['26px', { lineHeight: '34px', letterSpacing: '-0.015em', fontWeight: '700' }], 'display-lg': ['44px', { lineHeight: '52px', letterSpacing: '-0.03em', fontWeight: '800' }], 'metric-val': ['28px', { lineHeight: '32px', letterSpacing: '-0.02em', fontWeight: '800' }], 'display-lg-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.025em', fontWeight: '800' }], 'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.01em', fontWeight: '600' }], 'headline-sm': ['20px', { lineHeight: '28px', letterSpacing: '-0.01em', fontWeight: '600' }], 'headline-md': ['24px', { lineHeight: '32px', letterSpacing: '-0.015em', fontWeight: '700' }], 'body-lg': ['16px', { lineHeight: '24px', fontWeight: '500' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="HealthMate AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WkjYXO5BsejvLcP5h1BCv-teLj5Rs5dMUd_OKBkW7gN66x-Z-t_HSWcRb2IO1kw9rR40GgqcKUgCOrzseMT98JIXu3Pcne8oA1pjSHFtuEvXUQuL_MWMZWLmBzDOol8KJNgQ3opKFvFamB-L3NTih46TkOAuj7B6k5RmjGPwWh1LKKZ6xaYf2zO8mwl5SRLBaRRnsf6lyR_LtE-G0RtkvP2nkIZNOvKGjs8uogrx4d7h5BQGgJ_o-0Ru0"/><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface font-bold">HealthMate</span><span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm shadow-[0_2px_8px_-2px_rgba(0,105,72,0.25)]">AI</span></div><span class="hidden">Personalized Health Dashboard</span></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-95 relative"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><a aria-label="View Profile" class="w-11 h-11 flex items-center justify-center rounded-full active:scale-95 transition-transform ring-2 ring-primary/20" data-path="profile-settings" href="#"><img alt="User Avatar" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTrSMstl4QgLEPtgX9w1QZ7oYkq4tBFy9IkeTRMshGffPRyof9YgZaXgQPaqnIpLH6SWQULBYswSEzIiYP1c8LUukigUWf4DaixIXXQIfK1k6R-IDAOzy6rhzFo4GVES8kaWE9hylUCizFGX5L--mdaqzwet35VXVqYJ_AYqEaYYezLUaAV66MEWGvtBH3ChjwdHiTAnUiW7Ghy1mexFpAeoj37vfeUGPzyenGBEeat-r6bNqO1u62"/></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full px-margin pb-space-xl">
+<!-- Interactive Feedback Banner / Celebration Confetti Anchor -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 pointer-events-none transition-all duration-300 opacity-0 translate-y-[-8px]" id="toast-container">
+<div class="px-space-md py-space-xs rounded-full bg-primary-container text-on-primary-container shadow-xl flex items-center gap-space-xs font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[18px]">celebration</span>
+<span id="toast-msg">Routine Completed! Vitality +10 ✨</span>
+</div>
+</div>
+<!-- Header & Demonstration Data Tag -->
+<div class="flex flex-col gap-space-xs mb-space-md">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Demonstration Data</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Wednesday, Oct 25</span>
+</div>
+<div class="flex items-center justify-between mt-1">
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Daily Routines</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Harmonize your circadian rhythm</p>
+</div>
+<button class="flex items-center justify-center gap-1 bg-primary text-on-primary font-label-lg text-label-lg px-3.5 py-2.5 rounded-full shadow-md active:scale-95 transition-transform" id="open-add-modal-btn">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Add Goal</span>
+</button>
+</div>
+</div>
+<!-- Overall Progress Card with Progress Ring -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-md relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-36 h-36 bg-gradient-to-br from-primary-fixed/30 to-secondary-fixed/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between relative z-10">
+<div class="flex flex-col gap-1 pr-2">
+<div class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold">
+<span class="material-symbols-outlined text-[16px]">spark</span>
+<span>Daily Harmony</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface">6 of 8 Completed</div>
+<p class="font-body-md text-body-md text-on-surface-variant">You're 75% through today's vitality targets. Keep the momentum!</p>
+</div>
+<!-- SVG Progress Ring (75%) -->
+<div class="relative w-20 h-20 shrink-0 flex items-center justify-center">
+<svg class="w-20 h-20 transform -rotate-90" viewbox="0 0 80 80">
+<circle class="text-surface-container" cx="40" cy="40" fill="transparent" r="32" stroke="currentColor" stroke-width="7"></circle>
+<circle class="text-primary transition-all duration-700 ease-out" cx="40" cy="40" fill="transparent" id="summary-ring" r="32" stroke="currentColor" stroke-dasharray="201.06" stroke-dashoffset="50.26" stroke-linecap="round" stroke-width="7"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center">
+<span class="font-title-md text-title-md text-on-surface font-extrabold leading-none">75%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 7-Day Consistency Streak Section -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+</div>
+<div>
+<span class="font-title-md text-title-md text-on-surface block leading-tight">7-Day Consistency</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Active Streak Unbroken 🔥</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">Top 5%</span>
+</div>
+<!-- Day-by-Day Habit Circles -->
+<div class="grid grid-cols-7 gap-1 pt-1 text-center">
+<!-- Thu -->
+<div class="flex flex-col items-center gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Th</span>
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+</div>
+<!-- Fri -->
+<div class="flex flex-col items-center gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fr</span>
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+</div>
+<!-- Sat -->
+<div class="flex flex-col items-center gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sa</span>
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+</div>
+<!-- Sun -->
+<div class="flex flex-col items-center gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Su</span>
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+</div>
+<!-- Mon -->
+<div class="flex flex-col items-center gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mo</span>
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+</div>
+<!-- Tue -->
+<div class="flex flex-col items-center gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tu</span>
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+</div>
+<!-- Today (Wed) - Active / In Progress -->
+<div class="flex flex-col items-center gap-1">
+<span class="font-label-sm text-label-sm text-primary font-bold">Today</span>
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shadow-xs relative">
+<span class="material-symbols-outlined text-[18px]">timelapse</span>
+<span class="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Success State Banner: Morning Completed -->
+<div class="bg-surface-container-low rounded-xl p-space-md mb-space-md flex items-center gap-space-sm shadow-xs">
+<div class="w-11 h-11 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed-variant shrink-0">
+<span class="material-symbols-outlined text-[24px]">sunny</span>
+</div>
+<div class="flex-1 min-w-0">
+<span class="font-title-md text-title-md text-on-surface block leading-tight">Morning Routine Flawless! ☀️</span>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">All 3 morning rituals satisfied. Cortisol balanced.</p>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm">Done</span>
+</div>
+<!-- ROUTINES LIST -->
+<div class="flex flex-col gap-space-lg">
+<!-- 1. MORNING RHYTHM -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">wb_twilight</span>
+<h2 class="font-title-md text-title-md text-on-surface">Morning Rhythm</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">6:30 AM – 9:00 AM</span>
+</div>
+<!-- Item 1: Hydrate 500ml -->
+<div class="routine-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between gap-space-sm transition-all duration-300">
+<div class="flex items-center gap-space-sm min-w-0">
+<button aria-label="Toggle Hydrate 500ml" class="checkbox-btn w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 transition-transform active:scale-90" data-checked="true">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="routine-title line-through text-on-surface-variant font-body-lg text-body-lg truncate">Hydrate 500ml Alkaline Water</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Completed 6:45 AM</span>
+<button class="target-edit-btn font-label-sm text-label-sm text-tertiary flex items-center gap-0.5" data-current="500ml" data-goal-type="water">
+<span>Target: 500ml</span>
+<span class="material-symbols-outlined text-[12px]">edit</span>
+</button>
+</div>
+</div>
+</div>
+<div class="relative shrink-0">
+<button aria-label="Open routine options" class="menu-trigger-btn w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+<!-- Context Menu Dropdown -->
+<div class="menu-dropdown hidden absolute right-0 top-8 z-30 w-44 bg-surface-container-lowest rounded-xl shadow-xl py-1.5 flex-col">
+<button class="menu-action-edit w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">edit</span> Edit Schedule
+            </button>
+<button class="menu-action-reminder w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">notifications</span> Set Reminders
+            </button>
+<button class="menu-action-snooze w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">snooze</span> Snooze 30m
+            </button>
+<button class="menu-action-delete w-full px-3 py-2 text-left font-label-sm text-label-sm text-error hover:bg-error-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">delete</span> Delete
+            </button>
+</div>
+</div>
+</div>
+<!-- Item 2: Vitamin D3 + Omega-3 -->
+<div class="routine-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between gap-space-sm transition-all duration-300">
+<div class="flex items-center gap-space-sm min-w-0">
+<button aria-label="Toggle Vitamin D3" class="checkbox-btn w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 transition-transform active:scale-90" data-checked="true">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="routine-title line-through text-on-surface-variant font-body-lg text-body-lg truncate">Vitamin D3 (5000 IU) + Omega-3</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Completed 7:15 AM</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">With Breakfast</span>
+</div>
+</div>
+</div>
+<div class="relative shrink-0">
+<button aria-label="Open routine options" class="menu-trigger-btn w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+<div class="menu-dropdown hidden absolute right-0 top-8 z-30 w-44 bg-surface-container-lowest rounded-xl shadow-xl py-1.5 flex-col">
+<button class="menu-action-edit w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">edit</span> Edit Schedule
+            </button>
+<button class="menu-action-reminder w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">notifications</span> Set Reminders
+            </button>
+<button class="menu-action-snooze w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">snooze</span> Snooze 30m
+            </button>
+<button class="menu-action-delete w-full px-3 py-2 text-left font-label-sm text-label-sm text-error hover:bg-error-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">delete</span> Delete
+            </button>
+</div>
+</div>
+</div>
+<!-- Item 3: Posture Yoga -->
+<div class="routine-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between gap-space-sm transition-all duration-300">
+<div class="flex items-center gap-space-sm min-w-0">
+<button aria-label="Toggle Posture Yoga" class="checkbox-btn w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 transition-transform active:scale-90" data-checked="true">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="routine-title line-through text-on-surface-variant font-body-lg text-body-lg truncate">15-min Posture Yoga Flow</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Completed 8:00 AM</span>
+<button class="target-edit-btn font-label-sm text-label-sm text-tertiary flex items-center gap-0.5" data-current="15 min" data-goal-type="duration">
+<span>Duration: 15 min</span>
+<span class="material-symbols-outlined text-[12px]">edit</span>
+</button>
+</div>
+</div>
+</div>
+<div class="relative shrink-0">
+<button aria-label="Open routine options" class="menu-trigger-btn w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+<div class="menu-dropdown hidden absolute right-0 top-8 z-30 w-44 bg-surface-container-lowest rounded-xl shadow-xl py-1.5 flex-col">
+<button class="menu-action-edit w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">edit</span> Edit Schedule
+            </button>
+<button class="menu-action-reminder w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">notifications</span> Set Reminders
+            </button>
+<button class="menu-action-snooze w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">snooze</span> Snooze 30m
+            </button>
+<button class="menu-action-delete w-full px-3 py-2 text-left font-label-sm text-label-sm text-error hover:bg-error-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">delete</span> Delete
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. AFTERNOON FOCUS (DUE / ACTIONABLE) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">light_mode</span>
+<h2 class="font-title-md text-title-md text-on-surface">Afternoon Focus</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">In Window (12:00 PM – 2:00 PM)</span>
+</div>
+<!-- Item 4: Balanced Lunch Log (Completed) -->
+<div class="routine-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between gap-space-sm transition-all duration-300">
+<div class="flex items-center gap-space-sm min-w-0">
+<button aria-label="Toggle Balanced Lunch Log" class="checkbox-btn w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 transition-transform active:scale-90" data-checked="true">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="routine-title line-through text-on-surface-variant font-body-lg text-body-lg truncate">Balanced Lunch Log</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Logged 12:40 PM</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">620 kcal • High Protein</span>
+</div>
+</div>
+</div>
+<div class="relative shrink-0">
+<button aria-label="Open routine options" class="menu-trigger-btn w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+<div class="menu-dropdown hidden absolute right-0 top-8 z-30 w-44 bg-surface-container-lowest rounded-xl shadow-xl py-1.5 flex-col">
+<button class="menu-action-edit w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">edit</span> Edit Schedule
+            </button>
+<button class="menu-action-reminder w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">notifications</span> Set Reminders
+            </button>
+<button class="menu-action-snooze w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">snooze</span> Snooze 30m
+            </button>
+<button class="menu-action-delete w-full px-3 py-2 text-left font-label-sm text-label-sm text-error hover:bg-error-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">delete</span> Delete
+            </button>
+</div>
+</div>
+</div>
+<!-- Item 5: Post-meal 10-min Walk (Actionable / Due) -->
+<div class="routine-card bg-surface-container-lowest rounded-xl p-space-md shadow-md flex items-center justify-between gap-space-sm relative overflow-hidden transition-all duration-300">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary-container"></div>
+<div class="flex items-center gap-space-sm min-w-0 pl-1">
+<button aria-label="Toggle 10-min Walk" class="checkbox-btn w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-transparent shrink-0 transition-transform active:scale-90" data-checked="false">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="routine-title text-on-surface font-body-lg text-body-lg truncate font-bold">Post-meal 10-min Walk</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Due Right Now</span>
+<button class="target-edit-btn font-label-sm text-label-sm text-tertiary flex items-center gap-0.5" data-current="10 min" data-goal-type="duration">
+<span>Target: 10 min</span>
+<span class="material-symbols-outlined text-[12px]">edit</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<button class="mark-done-btn px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow-xs active:scale-95 transition-transform flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">check_circle</span>
+<span>Mark Done</span>
+</button>
+<div class="relative">
+<button aria-label="Open routine options" class="menu-trigger-btn w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+<div class="menu-dropdown hidden absolute right-0 top-8 z-30 w-44 bg-surface-container-lowest rounded-xl shadow-xl py-1.5 flex-col">
+<button class="menu-action-edit w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">edit</span> Edit Schedule
+              </button>
+<button class="menu-action-reminder w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">notifications</span> Set Reminders
+              </button>
+<button class="menu-action-snooze w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">snooze</span> Snooze 30m
+              </button>
+<button class="menu-action-delete w-full px-3 py-2 text-left font-label-sm text-label-sm text-error hover:bg-error-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">delete</span> Delete
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. EVENING WIND-DOWN (UPCOMING) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">bedtime</span>
+<h2 class="font-title-md text-title-md text-on-surface">Evening Wind-down</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">8:30 PM – 10:30 PM</span>
+</div>
+<!-- Item 6: Magnesium Glycinate -->
+<div class="routine-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between gap-space-sm transition-all duration-300">
+<div class="flex items-center gap-space-sm min-w-0">
+<button aria-label="Toggle Magnesium Glycinate" class="checkbox-btn w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-transparent shrink-0 transition-transform active:scale-90" data-checked="false">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="routine-title text-on-surface font-body-lg text-body-lg truncate">Magnesium Glycinate (400mg)</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Scheduled for 8:45 PM</span>
+<span class="font-label-sm text-label-sm text-tertiary">Promotes REM Sleep</span>
+</div>
+</div>
+</div>
+<div class="relative shrink-0">
+<button aria-label="Open routine options" class="menu-trigger-btn w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+<div class="menu-dropdown hidden absolute right-0 top-8 z-30 w-44 bg-surface-container-lowest rounded-xl shadow-xl py-1.5 flex-col">
+<button class="menu-action-edit w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">edit</span> Edit Schedule
+            </button>
+<button class="menu-action-reminder w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">notifications</span> Set Reminders
+            </button>
+<button class="menu-action-snooze w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">snooze</span> Snooze 30m
+            </button>
+<button class="menu-action-delete w-full px-3 py-2 text-left font-label-sm text-label-sm text-error hover:bg-error-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">delete</span> Delete
+            </button>
+</div>
+</div>
+</div>
+<!-- Item 7: Screen-free Wind Down -->
+<div class="routine-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between gap-space-sm transition-all duration-300">
+<div class="flex items-center gap-space-sm min-w-0">
+<button aria-label="Toggle Screen-free Wind Down" class="checkbox-btn w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-transparent shrink-0 transition-transform active:scale-90" data-checked="false">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="routine-title text-on-surface font-body-lg text-body-lg truncate">Screen-free Wind Down</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">9:30 PM (60 min before bed)</span>
+<button class="target-edit-btn font-label-sm text-label-sm text-tertiary flex items-center gap-0.5" data-current="60 min" data-goal-type="duration">
+<span>Duration: 60 min</span>
+<span class="material-symbols-outlined text-[12px]">edit</span>
+</button>
+</div>
+</div>
+</div>
+<div class="relative shrink-0">
+<button aria-label="Open routine options" class="menu-trigger-btn w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+<div class="menu-dropdown hidden absolute right-0 top-8 z-30 w-44 bg-surface-container-lowest rounded-xl shadow-xl py-1.5 flex-col">
+<button class="menu-action-edit w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">edit</span> Edit Schedule
+            </button>
+<button class="menu-action-reminder w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">notifications</span> Set Reminders
+            </button>
+<button class="menu-action-snooze w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">snooze</span> Snooze 30m
+            </button>
+<button class="menu-action-delete w-full px-3 py-2 text-left font-label-sm text-label-sm text-error hover:bg-error-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">delete</span> Delete
+            </button>
+</div>
+</div>
+</div>
+<!-- Item 8: Sleep Log -->
+<div class="routine-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between gap-space-sm transition-all duration-300">
+<div class="flex items-center gap-space-sm min-w-0">
+<button aria-label="Toggle Sleep Log" class="checkbox-btn w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-transparent shrink-0 transition-transform active:scale-90" data-checked="false">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="routine-title text-on-surface font-body-lg text-body-lg truncate">Sleep Target Preparation</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Aim: 10:30 PM</span>
+<button class="target-edit-btn font-label-sm text-label-sm text-tertiary flex items-center gap-0.5" data-current="8.0 hrs" data-goal-type="sleep">
+<span>Goal: 8.0 hrs</span>
+<span class="material-symbols-outlined text-[12px]">edit</span>
+</button>
+</div>
+</div>
+</div>
+<div class="relative shrink-0">
+<button aria-label="Open routine options" class="menu-trigger-btn w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+<div class="menu-dropdown hidden absolute right-0 top-8 z-30 w-44 bg-surface-container-lowest rounded-xl shadow-xl py-1.5 flex-col">
+<button class="menu-action-edit w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">edit</span> Edit Schedule
+            </button>
+<button class="menu-action-reminder w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">notifications</span> Set Reminders
+            </button>
+<button class="menu-action-snooze w-full px-3 py-2 text-left font-label-sm text-label-sm text-on-surface hover:bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">snooze</span> Snooze 30m
+            </button>
+<button class="menu-action-delete w-full px-3 py-2 text-left font-label-sm text-label-sm text-error hover:bg-error-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">delete</span> Delete
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- AI Companion Contextual Habit Tip -->
+<div class="mt-space-lg bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="font-title-md text-title-md text-on-surface">HealthMate Insight</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">Smart Sync</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Completing your 10-minute walk within 30 minutes after lunch reduces peak glucose spikes by up to 22%. You're in your optimal biological window!
+        </p>
+</div>
+</div>
+</div>
+<!-- EDIT TARGET DIALOG (BOTTOM SHEET MODAL) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-xs hidden flex items-end justify-center" id="target-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-xl p-space-lg shadow-2xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">tune</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Adjust Daily Target</h3>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container" id="close-target-modal">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="target-input-value">Target Metric / Quantity</label>
+<div class="flex items-center gap-2">
+<input class="w-full bg-surface-container-low px-4 py-3 rounded-lg font-body-lg text-body-lg text-on-surface focus:outline-none focus:bg-surface-container-lowest transition-colors" id="target-input-value" type="text" value="500ml"/>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Recommended baseline adapted to your activity metrics.</p>
+</div>
+<div class="flex gap-2 pt-2">
+<button class="flex-1 py-3 rounded-full bg-surface-container text-on-surface font-label-lg text-label-lg active:scale-95 transition-transform" id="cancel-target-btn">
+          Cancel
+        </button>
+<button class="flex-1 py-3 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-bold shadow-md active:scale-95 transition-transform" id="save-target-btn">
+          Save Target
+        </button>
+</div>
+</div>
+</div>
+<!-- ADD NEW ROUTINE MODAL (BOTTOM SHEET MODAL) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-xs hidden flex items-end justify-center" id="add-routine-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-xl p-space-lg shadow-2xl flex flex-col gap-space-md max-h-[85vh] overflow-y-auto">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">add_task</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Add New Routine</h3>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container" id="close-add-modal">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-lg text-label-lg text-on-surface" for="new-routine-title">Routine / Habit Name</label>
+<input class="w-full bg-surface-container-low px-4 py-3 rounded-lg font-body-lg text-body-lg text-on-surface focus:outline-none focus:bg-surface-container-lowest transition-colors" id="new-routine-title" placeholder="e.g., 10-Minute Breathwork" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-lg text-label-lg text-on-surface">Time of Day</label>
+<div class="grid grid-cols-3 gap-2">
+<button class="time-block-pill py-2.5 px-3 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold text-center transition-colors" data-block="Morning" type="button">Morning</button>
+<button class="time-block-pill py-2.5 px-3 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold text-center transition-colors" data-block="Afternoon" type="button">Afternoon</button>
+<button class="time-block-pill py-2.5 px-3 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold text-center transition-colors" data-block="Evening" type="button">Evening</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-lg text-label-lg text-on-surface" for="new-routine-target">Target Metric / Goal (Optional)</label>
+<input class="w-full bg-surface-container-low px-4 py-3 rounded-lg font-body-lg text-body-lg text-on-surface focus:outline-none focus:bg-surface-container-lowest transition-colors" id="new-routine-target" placeholder="e.g., 10 min, 2 capsules, 500ml" type="text"/>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low mt-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">notifications_active</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Smart AI Reminders</span>
+</div>
+<input checked="" class="w-5 h-5 accent-primary rounded cursor-pointer" type="checkbox"/>
+</div>
+</div>
+<div class="flex gap-2 pt-2">
+<button class="flex-1 py-3 rounded-full bg-surface-container text-on-surface font-label-lg text-label-lg active:scale-95 transition-transform" id="cancel-add-btn">
+          Cancel
+        </button>
+<button class="flex-1 py-3 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-bold shadow-md active:scale-95 transition-transform" id="confirm-add-btn">
+          Create Routine
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initRoutinesScreen() {
+    let currentEditingTargetBtn = null;
+
+    // Toast Trigger
+    function showToast(msg) {
+      const container = document.getElementById('toast-container');
+      const textSpan = document.getElementById('toast-msg');
+      if (!container || !textSpan) return;
+      textSpan.textContent = msg;
+      container.classList.remove('opacity-0', 'translate-y-[-8px]');
+      container.classList.add('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        container.classList.add('opacity-0', 'translate-y-[-8px]');
+        container.classList.remove('opacity-100', 'translate-y-0');
+      }, 2500);
+    }
+
+    // Toggle Habit Status
+    document.querySelectorAll('.checkbox-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = btn.closest('.routine-card');
+        const title = card ? card.querySelector('.routine-title') : null;
+        const isChecked = btn.getAttribute('data-checked') === 'true';
+
+        if (isChecked) {
+          btn.setAttribute('data-checked', 'false');
+          btn.className = 'checkbox-btn w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-transparent shrink-0 transition-transform active:scale-90';
+          if (title) {
+            title.classList.remove('line-through', 'text-on-surface-variant');
+            title.classList.add('text-on-surface');
+          }
+          showToast('Habit reopened');
+        } else {
+          btn.setAttribute('data-checked', 'true');
+          btn.className = 'checkbox-btn w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 transition-transform active:scale-90';
+          if (title) {
+            title.classList.add('line-through', 'text-on-surface-variant');
+            title.classList.remove('text-on-surface');
+          }
+          showToast('Routine marked complete! 🌿');
+        }
+      });
+    });
+
+    // Mark Done Button on actionable card
+    document.querySelectorAll('.mark-done-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = btn.closest('.routine-card');
+        if (!card) return;
+        const checkbox = card.querySelector('.checkbox-btn');
+        const title = card.querySelector('.routine-title');
+
+        if (checkbox) {
+          checkbox.setAttribute('data-checked', 'true');
+          checkbox.className = 'checkbox-btn w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 transition-transform active:scale-90';
+        }
+        if (title) {
+          title.classList.add('line-through', 'text-on-surface-variant');
+          title.classList.remove('font-bold');
+        }
+        btn.innerHTML = '<span class="material-symbols-outlined text-[15px]">done_all</span><span>Done</span>';
+        btn.classList.remove('bg-primary', 'text-on-primary');
+        btn.classList.add('bg-surface-container', 'text-on-surface-variant');
+        showToast('Walk completed! Circadian rhythm synced ✨');
+      });
+    });
+
+    // Dropdown Context Menus
+    document.querySelectorAll('.menu-trigger-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const dropdown = btn.parentElement.querySelector('.menu-dropdown');
+        document.querySelectorAll('.menu-dropdown').forEach(d => {
+          if (d !== dropdown) d.classList.add('hidden');
+        });
+        if (dropdown) dropdown.classList.toggle('hidden');
+      });
+    });
+
+    // Close menus when clicking outside
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.menu-dropdown').forEach(d => d.classList.add('hidden'));
+    });
+
+    // Menu Actions: Delete, Snooze, Reminder
+    document.querySelectorAll('.menu-action-delete').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = btn.closest('.routine-card');
+        if (card) {
+          card.style.opacity = '0';
+          card.style.transform = 'scale(0.95)';
+          setTimeout(() => card.remove(), 250);
+          showToast('Routine removed');
+        }
+      });
+    });
+
+    document.querySelectorAll('.menu-action-snooze').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        btn.closest('.menu-dropdown').classList.add('hidden');
+        showToast('Snoozed for 30 minutes ⏰');
+      });
+    });
+
+    document.querySelectorAll('.menu-action-reminder').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        btn.closest('.menu-dropdown').classList.add('hidden');
+        showToast('Reminder notification adjusted');
+      });
+    });
+
+    // Target Editing Modal
+    const targetModal = document.getElementById('target-modal');
+    const targetInput = document.getElementById('target-input-value');
+    const closeTargetModal = document.getElementById('close-target-modal');
+    const cancelTargetBtn = document.getElementById('cancel-target-btn');
+    const saveTargetBtn = document.getElementById('save-target-btn');
+
+    document.querySelectorAll('.target-edit-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentEditingTargetBtn = btn;
+        const currentVal = btn.getAttribute('data-current') || '500ml';
+        targetInput.value = currentVal;
+        targetModal.classList.remove('hidden');
+      });
+    });
+
+    function hideTargetModal() {
+      targetModal.classList.add('hidden');
+      currentEditingTargetBtn = null;
+    }
+
+    if (closeTargetModal) closeTargetModal.addEventListener('click', hideTargetModal);
+    if (cancelTargetBtn) cancelTargetBtn.addEventListener('click', hideTargetModal);
+
+    if (saveTargetBtn) {
+      saveTargetBtn.addEventListener('click', () => {
+        if (currentEditingTargetBtn && targetInput.value.trim()) {
+          const newVal = targetInput.value.trim();
+          currentEditingTargetBtn.setAttribute('data-current', newVal);
+          const spanText = currentEditingTargetBtn.querySelector('span:first-child');
+          if (spanText) {
+            spanText.textContent = 'Target: ' + newVal;
+          }
+          showToast('Target updated to ' + newVal);
+        }
+        hideTargetModal();
+      });
+    }
+
+    // Add Routine Modal
+    const addModal = document.getElementById('add-routine-modal');
+    const openAddBtn = document.getElementById('open-add-modal-btn');
+    const closeAddModal = document.getElementById('close-add-modal');
+    const cancelAddBtn = document.getElementById('cancel-add-btn');
+    const confirmAddBtn = document.getElementById('confirm-add-btn');
+    const newRoutineTitle = document.getElementById('new-routine-title');
+
+    if (openAddBtn) {
+      openAddBtn.addEventListener('click', () => {
+        addModal.classList.remove('hidden');
+        if (newRoutineTitle) newRoutineTitle.focus();
+      });
+    }
+
+    function hideAddModal() {
+      addModal.classList.add('hidden');
+      if (newRoutineTitle) newRoutineTitle.value = '';
+    }
+
+    if (closeAddModal) closeAddModal.addEventListener('click', hideAddModal);
+    if (cancelAddBtn) cancelAddBtn.addEventListener('click', hideAddModal);
+
+    // Time block pills in add modal
+    document.querySelectorAll('.time-block-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.time-block-pill').forEach(p => {
+          p.className = 'time-block-pill py-2.5 px-3 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold text-center transition-colors';
+        });
+        pill.className = 'time-block-pill py-2.5 px-3 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold text-center transition-colors';
+      });
+    });
+
+    if (confirmAddBtn) {
+      confirmAddBtn.addEventListener('click', () => {
+        const title = newRoutineTitle.value.trim();
+        if (title) {
+          showToast('Goal added: ' + title);
+          hideAddModal();
+        } else {
+          newRoutineTitle.focus();
+        }
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-xs max-w-lg mx-auto"><a aria-current="page" class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-0.5 transition-all text-primary font-bold" data-path="personalized-health-dashboard" href="#"><span class="material-symbols-outlined text-[24px]">favorite</span><span class="font-label-sm text-label-sm tracking-tight">Today</span></a><a class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-all relative" data-path="ai-health-assistant" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">auto_awesome</span><span class="absolute -top-0.5 -right-1 w-2 h-2 rounded-full bg-secondary-container ring-1.5 ring-surface"></span></div><span class="font-label-sm text-label-sm tracking-tight">AI Mate</span></a><a class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-all" data-path="medicines-reminders" href="#"><span class="material-symbols-outlined text-[24px]">medication</span><span class="font-label-sm text-label-sm tracking-tight">Care</span></a><a class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-all" data-path="nutrition-food-diary" href="#"><span class="material-symbols-outlined text-[24px]">local_fire_department</span><span class="font-label-sm text-label-sm tracking-tight">Activity</span></a><a class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-all" data-path="profile-settings" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="font-label-sm text-label-sm tracking-tight">Profile</span></a></div></nav></body></html>

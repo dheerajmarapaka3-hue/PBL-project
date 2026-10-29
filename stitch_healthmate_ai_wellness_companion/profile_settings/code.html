@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#faf8ff;font-family:'Plus Jakarta Sans',sans-serif;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'surface-container-lowest': '#ffffff', 'on-primary-fixed-variant': '#005137', 'error': '#ba1a1a', 'background': '#faf8ff', 'tertiary-container': '#007bb9', 'surface-container-high': '#e2e7ff', 'on-tertiary': '#ffffff', 'on-secondary-fixed-variant': '#005049', 'tertiary-fixed': '#cce5ff', 'on-secondary-fixed': '#00201d', 'surface': '#faf8ff', 'on-tertiary-container': '#fdfcff', 'on-primary-container': '#f5fff7', 'outline': '#6d7a72', 'surface-container-highest': '#dae2fd', 'error-container': '#ffdad6', 'surface-dim': '#d2d9f4', 'on-secondary': '#ffffff', 'inverse-surface': '#283044', 'surface-bright': '#faf8ff', 'on-background': '#131b2e', 'on-surface': '#131b2e', 'secondary-fixed': '#89f5e7', 'surface-container': '#eaedff', 'primary-fixed-dim': '#68dba9', 'secondary': '#006a61', 'on-primary-fixed': '#002114', 'surface-container-low': '#f2f3ff', 'on-error': '#ffffff', 'secondary-container': '#86f2e4', 'surface-variant': '#dae2fd', 'on-tertiary-fixed': '#001d31', 'on-secondary-container': '#006f66', 'secondary-fixed-dim': '#6bd8cb', 'primary-fixed': '#85f8c4', 'on-surface-variant': '#3d4a42', 'surface-tint': '#006c4a', 'on-primary': '#ffffff', 'on-tertiary-fixed-variant': '#004b73', 'primary-container': '#00855d', 'tertiary-fixed-dim': '#93ccff', 'inverse-on-surface': '#eef0ff', 'outline-variant': '#bccac0', 'tertiary': '#006194', 'primary': '#006948', 'inverse-primary': '#68dba9', 'on-error-container': '#93000a' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, 'spacing': { 'gutter-tablet': '1.5rem', 'margin-tablet': '2rem', 'space-xs': '0.25rem', 'space-xl': '2rem', 'space-md': '1rem', 'space-sm': '0.5rem', 'space-lg': '1.5rem', 'gutter': '1rem', 'gutter-desktop': '2rem', 'margin-desktop': '3rem', 'margin': '1.25rem' }, 'fontFamily': { 'title-md': ['Plus Jakarta Sans'], 'label-sm': ['Plus Jakarta Sans'], 'body-md': ['Plus Jakarta Sans'], 'headline-lg': ['Plus Jakarta Sans'], 'headline-lg-mobile': ['Plus Jakarta Sans'], 'display-lg': ['Plus Jakarta Sans'], 'metric-val': ['Plus Jakarta Sans'], 'display-lg-mobile': ['Plus Jakarta Sans'], 'label-lg': ['Plus Jakarta Sans'], 'headline-sm': ['Plus Jakarta Sans'], 'headline-md': ['Plus Jakarta Sans'], 'body-lg': ['Plus Jakarta Sans'] }, 'fontSize': { 'title-md': ['18px', { lineHeight: '26px', fontWeight: '600' }], 'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '600' }], 'body-md': ['14px', { lineHeight: '22px', fontWeight: '400' }], 'headline-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.02em', fontWeight: '700' }], 'headline-lg-mobile': ['26px', { lineHeight: '34px', letterSpacing: '-0.015em', fontWeight: '700' }], 'display-lg': ['44px', { lineHeight: '52px', letterSpacing: '-0.03em', fontWeight: '800' }], 'metric-val': ['28px', { lineHeight: '32px', letterSpacing: '-0.02em', fontWeight: '800' }], 'display-lg-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.025em', fontWeight: '800' }], 'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.01em', fontWeight: '600' }], 'headline-sm': ['20px', { lineHeight: '28px', letterSpacing: '-0.01em', fontWeight: '600' }], 'headline-md': ['24px', { lineHeight: '32px', letterSpacing: '-0.015em', fontWeight: '700' }], 'body-lg': ['16px', { lineHeight: '24px', fontWeight: '500' }] } } } };</script></head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="HealthMate AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WkjYXO5BsejvLcP5h1BCv-teLj5Rs5dMUd_OKBkW7gN66x-Z-t_HSWcRb2IO1kw9rR40GgqcKUgCOrzseMT98JIXu3Pcne8oA1pjSHFtuEvXUQuL_MWMZWLmBzDOol8KJNgQ3opKFvFamB-L3NTih46TkOAuj7B6k5RmjGPwWh1LKKZ6xaYf2zO8mwl5SRLBaRRnsf6lyR_LtE-G0RtkvP2nkIZNOvKGjs8uogrx4d7h5BQGgJ_o-0Ru0"/><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface font-bold">HealthMate</span><span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm shadow-[0_2px_8px_-2px_rgba(0,105,72,0.25)]">AI</span></div><span class="hidden">Profile</span></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-95 relative"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><a class="w-11 h-11 flex items-center justify-center rounded-full active:scale-95 transition-transform ring-2 ring-primary/20" data-path="profile" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTrSMstl4QgLEPtgX9w1QZ7oYkq4tBFy9IkeTRMshGffPRyof9YgZaXgQPaqnIpLH6SWQULBYswSEzIiYP1c8LUukigUWf4DaixIXXQIfK1k6R-IDAOzy6rhzFo4GVES8kaWE9hylUCizFGX5L--mdaqzwet35VXVqYJ_AYqEaYYezLUaAV66MEWGvtBH3ChjwdHiTAnUiW7Ghy1mexFpAeoj37vfeUGPzyenGBEeat-r6bNqO1u62"/></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full px-margin pb-10 space-y-space-lg">
+<!-- User Profile Header Card -->
+<section class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm relative overflow-hidden">
+<div class="absolute -top-12 -right-12 w-44 h-44 rounded-full bg-secondary-fixed/30 blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-8 -left-8 w-36 h-36 rounded-full bg-primary-fixed/20 blur-xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col space-y-space-md">
+<!-- Avatar & Vital Status -->
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-20 h-20 rounded-full object-cover shadow-md" data-alt="Warm natural portrait of Sarah Jenkins, a vibrant 29-year-old woman smiling serenely, soft cinematic daylight, studio rim lighting, health and wellness aesthetic, mint green accents, modern editorial photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf_Pzth7KYOOvX9u4bJEEbvhdvC771XcPyBTj8oSENuZixMgIS6UNO_xa5dbepFYGQqHQ8sQg7zduMoL9-gnWymGZod3TpOaEJz_hPy2WFd2iiO98mRubzguODl59DAh2ePiN_xpzd9f6TRR5NOWW5f-s-YmW8JQ0QGLs5_qm3tAc-3f6QrULQAddFk5i0sfOJa1IQDKhlEgNieCo-96fLTzwT4aBoFIFqKdY_sGVtdWCeP8fMWnvZ"/>
+<div class="absolute bottom-0 right-0 w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Sarah Jenkins</h1>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full whitespace-nowrap">29 yrs</span>
+</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+              Pro HealthMate Member
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 truncate">sarah.jenkins@luminahealth.io</p>
+</div>
+</div>
+<!-- Quick Biometrics Ribbon -->
+<div class="grid grid-cols-3 gap-2 pt-2">
+<div class="flex flex-col items-center justify-center bg-surface-container-low p-2.5 rounded-lg text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-error">bloodtype</span> Blood
+          </span>
+<span class="font-title-md text-title-md text-on-surface font-bold mt-0.5">A+</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-surface-container-low p-2.5 rounded-lg text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">height</span> Height
+          </span>
+<span class="font-title-md text-title-md text-on-surface font-bold mt-0.5">5'7"</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-surface-container-low p-2.5 rounded-lg text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">scale</span> Weight
+          </span>
+<span class="font-title-md text-title-md text-on-surface font-bold mt-0.5">138 <span class="font-label-sm text-label-sm font-normal text-on-surface-variant">lbs</span></span>
+</div>
+</div>
+<!-- Emergency Contact Pill Box -->
+<div class="flex items-center justify-between bg-error-container/40 p-3 rounded-lg">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-9 h-9 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">emergency</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center gap-1 truncate">
+              David Jenkins <span class="font-normal text-on-surface-variant">(Spouse)</span>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant truncate">+1 (555) 019-2834</div>
+</div>
+</div>
+<a aria-label="Call Emergency Contact" class="w-8 h-8 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center shadow-sm shrink-0 active:scale-95 transition-transform" href="tel:+15550192834">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Personal & Medical Information -->
+<section class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">medical_services</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">Personal &amp; Medical Profile</h2>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline flex items-center gap-0.5">
+        Edit <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Conditions -->
+<div class="space-y-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Health Conditions</span>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-body-md text-body-md">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+          Mild Asthma
+          <button aria-label="Remove Mild Asthma info" class="text-on-surface-variant hover:text-error ml-1">
+<span class="material-symbols-outlined text-[14px]">info</span>
+</button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-body-md text-body-md">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+          Seasonal Allergies
+          <button aria-label="Remove Seasonal Allergies info" class="text-on-surface-variant hover:text-error ml-1">
+<span class="material-symbols-outlined text-[14px]">info</span>
+</button>
+</span>
+<button class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[16px]">add</span> Add Condition
+        </button>
+</div>
+</div>
+<!-- Active Medications List -->
+<div class="space-y-2 pt-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Daily Medications</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">2 Active</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">pill</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold leading-tight">Albuterol HFA</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">90mcg Inhaler • 2 puffs as needed</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">medication_liquid</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold leading-tight">Cetirizine (Zyrtec)</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">10mg Tablet • Daily at 8:00 AM</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Appearance & Theme Customizer -->
+<section class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">palette</span>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">Appearance &amp; Theme</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Personalize your luminous companion interface</p>
+</div>
+</div>
+<!-- Mode Selector Tabs -->
+<div class="flex p-1 rounded-xl bg-surface-container-low">
+<button class="flex-1 py-2 flex items-center justify-center gap-1.5 rounded-lg bg-surface-container-lowest text-primary shadow-sm font-label-sm text-label-sm font-semibold transition-all" id="theme-light">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">light_mode</span>
+        Light
+      </button>
+<button class="flex-1 py-2 flex items-center justify-center gap-1.5 rounded-lg text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface transition-all" id="theme-dark">
+<span class="material-symbols-outlined text-[18px]">dark_mode</span>
+        Dark
+      </button>
+<button class="flex-1 py-2 flex items-center justify-center gap-1.5 rounded-lg text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface transition-all" id="theme-system">
+<span class="material-symbols-outlined text-[18px]">settings_brightness</span>
+        System
+      </button>
+</div>
+<!-- Custom Accent Color Picker -->
+<div class="space-y-2 pt-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Accent Hue</label>
+<div class="flex items-center justify-between px-2 pt-1">
+<!-- Mint Green (Active) -->
+<button aria-label="Mint Green theme accent" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shadow-sm relative transform scale-110">
+<span class="material-symbols-outlined text-[20px] text-on-primary">check</span>
+</button>
+<!-- Ocean Teal -->
+<button aria-label="Ocean Teal theme accent" class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center shadow-sm hover:scale-105 transition-transform"></button>
+<!-- Radiant Sky -->
+<button aria-label="Radiant Sky theme accent" class="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center shadow-sm hover:scale-105 transition-transform"></button>
+<!-- Warm Coral -->
+<button aria-label="Warm Coral theme accent" class="w-10 h-10 rounded-full bg-error flex items-center justify-center shadow-sm hover:scale-105 transition-transform"></button>
+<!-- Sunset Violet -->
+<button aria-label="Sunset Violet theme accent" class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center shadow-sm hover:scale-105 transition-transform"></button>
+</div>
+</div>
+</section>
+<!-- Notifications & Quiet Hours -->
+<section class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">Notifications &amp; Rhythm</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Alert schedules and gentle reminders</p>
+</div>
+</div>
+<div class="space-y-space-md pt-1">
+<!-- Push Notifications Toggle -->
+<div class="flex items-center justify-between">
+<div class="pr-2">
+<p class="font-body-lg text-body-lg text-on-surface font-semibold">Push Notifications</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Immediate medication, health advice and hydration nudges</p>
+</div>
+<button aria-pressed="true" class="w-12 h-7 bg-primary rounded-full relative p-0.5 transition-colors shrink-0" type="button">
+<span class="block w-6 h-6 bg-surface-container-lowest rounded-full transform translate-x-5 shadow-sm transition-transform"></span>
+</button>
+</div>
+<!-- Medication Alarm Sound -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">music_note</span>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold">Reminders Chime</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Luminous Harp (Soft Harmonic)</p>
+</div>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-0.5">
+          Change <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+<!-- Quiet Hours Schedule -->
+<div class="p-3.5 rounded-lg bg-surface-container-low space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[20px]">bedtime</span>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold">Quiet Hours</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Mute non-urgent notifications during sleep</p>
+</div>
+</div>
+<button aria-pressed="true" class="w-12 h-7 bg-primary rounded-full relative p-0.5 transition-colors shrink-0" type="button">
+<span class="block w-6 h-6 bg-surface-container-lowest rounded-full transform translate-x-5 shadow-sm transition-transform"></span>
+</button>
+</div>
+<div class="flex items-center justify-between pt-1 font-body-md text-body-md bg-surface-container-lowest p-2.5 rounded-lg">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Scheduled Window</span>
+<span class="font-semibold text-on-surface font-body-md text-body-md">10:00 PM – 07:00 AM</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Privacy & App Permissions -->
+<section class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">shield</span>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">Privacy &amp; Permissions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Control clinical biometrics and sensor sync</p>
+</div>
+</div>
+<div class="space-y-space-md pt-1">
+<!-- Biometric FaceID Login -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-primary-fixed/50 text-on-primary-fixed-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">fingerprint</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold">Biometric FaceID Login</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Require biometric unlock when returning</p>
+</div>
+</div>
+<button aria-pressed="true" class="w-12 h-7 bg-primary rounded-full relative p-0.5 transition-colors shrink-0" type="button">
+<span class="block w-6 h-6 bg-surface-container-lowest rounded-full transform translate-x-5 shadow-sm transition-transform"></span>
+</button>
+</div>
+<!-- HealthKit / Apple Health Sync -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-error-container/60 text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold">Apple Health / HealthKit</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Auto-sync resting heart rate, sleep &amp; steps</p>
+</div>
+</div>
+<button aria-pressed="true" class="w-12 h-7 bg-primary rounded-full relative p-0.5 transition-colors shrink-0" type="button">
+<span class="block w-6 h-6 bg-surface-container-lowest rounded-full transform translate-x-5 shadow-sm transition-transform"></span>
+</button>
+</div>
+<!-- Location for UV/Pollen Index -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold">Environmental Location</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Real-time localized UV &amp; pollen indices</p>
+</div>
+</div>
+<button aria-pressed="true" class="w-12 h-7 bg-primary rounded-full relative p-0.5 transition-colors shrink-0" type="button">
+<span class="block w-6 h-6 bg-surface-container-lowest rounded-full transform translate-x-5 shadow-sm transition-transform"></span>
+</button>
+</div>
+<!-- AI Data Anonymization -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold">AI Analysis Anonymization</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Strip personal identifers before AI diagnosis</p>
+</div>
+</div>
+<button aria-pressed="true" class="w-12 h-7 bg-primary rounded-full relative p-0.5 transition-colors shrink-0" type="button">
+<span class="block w-6 h-6 bg-surface-container-lowest rounded-full transform translate-x-5 shadow-sm transition-transform"></span>
+</button>
+</div>
+</div>
+</section>
+<!-- Account & Security -->
+<section class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">Account &amp; Security</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Password integrity and authentication</p>
+</div>
+</div>
+<div class="space-y-2 pt-1">
+<button class="w-full flex items-center justify-between p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors text-left">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">password</span>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold leading-tight">Change Password</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Updated 42 days ago</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+</button>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">phonelink_lock</span>
+<div>
+<div class="flex items-center gap-2">
+<p class="font-body-lg text-body-lg text-on-surface font-semibold leading-tight">Two-Factor Authentication</p>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">Enabled</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Secured via Authenticator App</p>
+</div>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline">Manage</button>
+</div>
+</div>
+</section>
+<!-- Data Management & Export -->
+<section class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">Data Management &amp; Export</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Download or manage your clinical records</p>
+</div>
+</div>
+<div class="space-y-2 pt-1">
+<!-- Export Medical Summary -->
+<button class="w-full flex items-center justify-between p-3.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors text-left active:scale-[0.99]">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold">Export Medical Summary (PDF)</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Physician-ready record of vitals &amp; allergies</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">download</span>
+</button>
+<!-- Download JSON -->
+<button class="w-full flex items-center justify-between p-3.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors text-left active:scale-[0.99]">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">data_object</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold">Download All Health Data (JSON)</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Complete raw biometric and sensor log archive</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">download</span>
+</button>
+<!-- Delete Account (Destructive trigger) -->
+<div class="pt-2">
+<button class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-error bg-error-container/40 hover:bg-error-container/70 font-label-lg text-label-lg transition-colors" id="open-delete-modal-btn">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+          Delete HealthMate Account
+        </button>
+</div>
+</div>
+</section>
+<!-- Logout Button -->
+<div class="w-full pt-2">
+<button class="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-full bg-surface-container-highest text-on-surface hover:bg-surface-container-high active:scale-[0.98] transition-all font-title-md text-title-md shadow-sm" id="open-logout-sheet-btn">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+      Log Out
+    </button>
+</div>
+<!-- Demonstration Data Tag & Version Build Badge -->
+<div class="flex flex-col items-center justify-center text-center pt-2 space-y-1">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+      HealthMate AI v2.4.0 (Build 384) • Demonstration Data
+    </div>
+<p class="font-label-sm text-label-sm text-outline">HIPAA Compliant Cloud Vault • Encrypted End-to-End</p>
+</div>
+<!-- Confirmation Sheet / Modal: Logout (Hidden by default) -->
+<div aria-modal="true" class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm flex items-end justify-center hidden" id="logout-sheet" role="dialog">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-3xl p-space-lg shadow-xl space-y-space-md animate-in slide-in-from-bottom duration-200">
+<div class="w-12 h-1.5 rounded-full bg-surface-container-high mx-auto"></div>
+<div class="flex flex-col items-center text-center space-y-2">
+<div class="w-14 h-14 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">logout</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Log Out of HealthMate?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Your biometric encryption key will be locked on this device. You will need to authenticate again on next login.</p>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<button class="w-full py-3.5 rounded-full bg-error text-on-error font-title-md text-title-md active:scale-95 transition-transform" id="confirm-logout-btn">
+          Log Out
+        </button>
+<button class="w-full py-3.5 rounded-full bg-surface-container text-on-surface font-title-md text-title-md active:scale-95 transition-transform" id="cancel-logout-btn">
+          Cancel
+        </button>
+</div>
+</div>
+</div>
+<!-- Destructive Modal: Delete Account (Hidden by default) -->
+<div aria-modal="true" class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm flex items-center justify-center p-4 hidden" id="delete-modal" role="dialog">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-2xl p-space-lg shadow-xl space-y-space-md">
+<div class="w-12 h-12 rounded-full bg-error-container text-error flex items-center justify-center mx-auto">
+<span class="material-symbols-outlined text-[26px]">warning</span>
+</div>
+<div class="text-center space-y-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Delete Account &amp; Biometrics?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          This action is immediate and non-reversible. All logged clinical records, AI dialogues, and synchronized HealthKit snapshots will be permanently wiped.
+        </p>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<button class="w-full py-3 rounded-full bg-error text-on-error font-title-md text-title-md active:scale-95 transition-transform" id="confirm-delete-btn">
+          Permanently Delete
+        </button>
+<button class="w-full py-3 rounded-full bg-surface-container text-on-surface font-title-md text-title-md active:scale-95 transition-transform" id="cancel-delete-btn">
+          Keep My Account
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interactions for Modals & Interactive Toggles
+  const logoutBtn = document.getElementById('open-logout-sheet-btn');
+  const logoutSheet = document.getElementById('logout-sheet');
+  const cancelLogoutBtn = document.getElementById('cancel-logout-btn');
+  const confirmLogoutBtn = document.getElementById('confirm-logout-btn');
+
+  const deleteBtn = document.getElementById('open-delete-modal-btn');
+  const deleteModal = document.getElementById('delete-modal');
+  const cancelDeleteBtn = document.getElementById('cancel-delete-btn');
+  const confirmDeleteBtn = document.getElementById('confirm-delete-btn');
+
+  if (logoutBtn && logoutSheet && cancelLogoutBtn) {
+    logoutBtn.addEventListener('click', () => logoutSheet.classList.remove('hidden'));
+    cancelLogoutBtn.addEventListener('click', () => logoutSheet.classList.add('hidden'));
+    if (confirmLogoutBtn) {
+      confirmLogoutBtn.addEventListener('click', () => {
+        logoutSheet.classList.add('hidden');
+      });
+    }
+  }
+
+  if (deleteBtn && deleteModal && cancelDeleteBtn) {
+    deleteBtn.addEventListener('click', () => deleteModal.classList.remove('hidden'));
+    cancelDeleteBtn.addEventListener('click', () => deleteModal.classList.add('hidden'));
+    if (confirmDeleteBtn) {
+      confirmDeleteBtn.addEventListener('click', () => {
+        deleteModal.classList.add('hidden');
+      });
+    }
+  }
+
+  // Toggle Switches Interaction
+  document.querySelectorAll('button[aria-pressed]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const isPressed = btn.getAttribute('aria-pressed') === 'true';
+      btn.setAttribute('aria-pressed', (!isPressed).toString());
+      const indicator = btn.querySelector('span');
+      if (!isPressed) {
+        btn.classList.remove('bg-surface-container-highest');
+        btn.classList.add('bg-primary');
+        if (indicator) {
+          indicator.classList.remove('translate-x-0');
+          indicator.classList.add('translate-x-5');
+        }
+      } else {
+        btn.classList.remove('bg-primary');
+        btn.classList.add('bg-surface-container-highest');
+        if (indicator) {
+          indicator.classList.remove('translate-x-5');
+          indicator.classList.add('translate-x-0');
+        }
+      }
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-xs max-w-lg mx-auto"><a class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-all" data-path="today" href="#"><span class="material-symbols-outlined text-[24px]">favorite</span><span class="font-label-sm text-label-sm tracking-tight">Today</span></a><a class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-all relative" data-path="ai-mate" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">auto_awesome</span><span class="absolute -top-0.5 -right-1 w-2 h-2 rounded-full bg-secondary-container ring-1.5 ring-surface"></span></div><span class="font-label-sm text-label-sm tracking-tight">AI Mate</span></a><a class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-all" data-path="care" href="#"><span class="material-symbols-outlined text-[24px]">medication</span><span class="font-label-sm text-label-sm tracking-tight">Care</span></a><a class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-all" data-path="activity" href="#"><span class="material-symbols-outlined text-[24px]">local_fire_department</span><span class="font-label-sm text-label-sm tracking-tight">Activity</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-0.5 transition-all text-primary font-bold" data-path="profile" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="font-label-sm text-label-sm tracking-tight">Profile</span></a></div></nav></body></html>

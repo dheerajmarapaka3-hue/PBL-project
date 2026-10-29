@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface-bright":"#faf8ff","on-primary-container":"#f5fff7","on-secondary-fixed":"#00201d","on-secondary-fixed-variant":"#005049","primary-fixed":"#85f8c4","surface-container-lowest":"#ffffff","primary-container":"#00855d","tertiary-container":"#007bb9","outline-variant":"#bccac0","outline":"#6d7a72","surface-variant":"#dae2fd","on-primary":"#ffffff","on-background":"#131b2e","secondary-fixed-dim":"#6bd8cb","surface":"#faf8ff","surface-container-low":"#f2f3ff","on-secondary":"#ffffff","surface-container":"#eaedff","inverse-primary":"#68dba9","on-primary-fixed":"#002114","primary":"#006948","secondary":"#006a61","tertiary-fixed":"#cce5ff","secondary-container":"#86f2e4","on-secondary-container":"#006f66","tertiary-fixed-dim":"#93ccff","primary-fixed-dim":"#68dba9","tertiary":"#006194","error-container":"#ffdad6","inverse-surface":"#283044","secondary-fixed":"#89f5e7","inverse-on-surface":"#eef0ff","background":"#faf8ff","surface-dim":"#d2d9f4","on-tertiary-fixed-variant":"#004b73","error":"#ba1a1a","surface-tint":"#006c4a","on-primary-fixed-variant":"#005137","on-error-container":"#93000a","on-tertiary-container":"#fdfcff","on-tertiary-fixed":"#001d31","on-surface":"#131b2e","on-surface-variant":"#3d4a42","surface-container-highest":"#dae2fd","on-error":"#ffffff","on-tertiary":"#ffffff","surface-container-high":"#e2e7ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-md":"1rem","margin-desktop":"3rem","margin":"1.25rem","space-lg":"1.5rem","gutter":"1rem","gutter-desktop":"2rem","margin-tablet":"2rem","space-sm":"0.5rem","gutter-tablet":"1.5rem","space-xs":"0.25rem","space-xl":"2rem"},"fontFamily":{"body-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"metric-val":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"display-lg":["44px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"800"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"700"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"800"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"metric-val":["28px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"800"}],"title-md":["18px",{"lineHeight":"26px","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-space-lg pb-space-lg flex items-center gap-space-sm"><img alt="HealthMate AI brand mark featuring a stylized heart fused with a vibrant vitality spark/cross emblem, surrounded by a smooth glassmorphism glow in mint green, ocean teal, and subtle coral accent.. Brand logo. - Primary color: #059669
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/d/1Zt-jL151eUv8194f47rC8s00j19n_hBv"/><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface leading-tight">HealthMate</span><span class="font-label-sm text-label-sm text-secondary leading-none">AI Companion</span></div></div><div class="px-space-md mb-space-xs"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline">Core Navigation</span></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary-container text-on-primary-container shadow-[0_8px_20px_-4px_rgba(5,150,105,0.25)] font-label-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="ai-assistant" href="#"><span class="material-symbols-outlined text-[20px]">smart_toy</span><span>AI Assistant</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="health-tracking" href="#"><span class="material-symbols-outlined text-[20px]">vital_signs</span><span>Health Tracking</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="medical-reports" href="#"><span class="material-symbols-outlined text-[20px]">clinical_notes</span><span>Medical Reports</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="medicines" href="#"><span class="material-symbols-outlined text-[20px]">medication</span><span>Medicines</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="daily-routines" href="#"><span class="material-symbols-outlined text-[20px]">calendar_today</span><span>Daily Routines</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="workouts" href="#"><span class="material-symbols-outlined text-[20px]">fitness_center</span><span>Workouts</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="nutrition" href="#"><span class="material-symbols-outlined text-[20px]">nutrition</span><span>Nutrition</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="meditation" href="#"><span class="material-symbols-outlined text-[20px]">self_improvement</span><span>Meditation &amp; Yoga</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl transition-all bg-primary-container text-on-primary-container shadow-[0_8px_20px_-4px_rgba(5,150,105,0.25)] font-label-lg" data-path="profile" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span>Profile &amp; Settings</span></a></nav></div><div class="px-space-md"><div class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface">Care Plan</span><span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-space-xs py-0.5 rounded-full">Active</span></div><p class="font-label-sm text-label-sm text-on-surface-variant">Personalized telemetry sync enabled</p></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-xl flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full pl-10 pr-space-md py-2 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary" placeholder="Search health metrics, labs, logs..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Live Telemetry</span></div><span class="font-label-sm text-label-sm px-space-sm py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full">Demo Mode</span><button class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Subtle decorative ambient glow backdrops -->
+<div class="relative w-full max-w-7xl mx-auto px-space-md lg:px-space-xl py-space-lg">
+<div class="absolute top-10 left-1/4 w-96 h-96 bg-primary-fixed-dim/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-60 right-10 w-80 h-80 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Preferences &amp; Governance</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified_user</span> HIPAA Tier 4
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Account, Health Profile &amp; Preferences</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Manage clinical biometrics, theme appearance, AI telemetry sandboxing, and institutional-grade data governance.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-all font-label-lg text-label-lg shadow-sm" id="save-status-btn" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">cloud_done</span>
+<span>Synced 2m ago</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-lg py-2.5 rounded-full bg-error-container text-on-error-container hover:opacity-90 active:scale-95 transition-all font-label-lg text-label-lg shadow-sm" id="open-logout-modal" type="button">
+<span class="material-symbols-outlined text-[18px]">logout</span>
+<span>Log Out</span>
+</button>
+</div>
+</div>
+<!-- Grid: 4 cols Left Summary + 8 cols Right Configuration Panel -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<!-- LEFT COLUMN: 4 COLS (Summary, Quick Vitals, Contacts, Vault) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- User Identity Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 bg-primary/5 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="relative">
+<img class="w-18 h-18 w-[72px] h-[72px] rounded-full object-cover shadow-md ring-2 ring-primary-fixed" data-alt="Close up portrait photograph of Sarah Jenkins, a vibrant 29 year old woman with an uplifting gentle smile, soft natural studio lighting with gentle emerald and warm ambient rim light, crisp professional clarity, modern healthcare editorial look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOTq-cC-Iu6IXP1kip-YYy_kE5Lkl9mV3D7V_ns9J4yJK-EIg5XZYbRTxrJjEc16Z2TJEuZvrIFLbX0cFSrwMIdXdDE4kxOANIZz4maH_Lv3CPr-RqtFVe74gnQMdwZ2c6YK2NkIV4bJX-ZZWd11x7gHZB4MxHKDzmW5HluzPx0O8Xap-L4tZ1LWcvaSCL4W4DmErkPbo_uaiVnfQVYYXm1jrscAXNZYdyFa73mNTe7XPh-WwLfxqH"/>
+<button class="absolute -bottom-1 -right-1 w-7 h-7 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-md hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-[15px]">photo_camera</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm px-space-sm py-1 bg-secondary-container text-on-secondary-container rounded-full flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified</span> Pro Member
+            </span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Sarah Jenkins</h2>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">• 29 yrs</span>
+</div>
+<p class="font-body-md text-body-md text-outline font-normal">sarah.jenkins@luminahealth.io</p>
+</div>
+<!-- Quick Vitals Pill Matrix -->
+<div class="grid grid-cols-3 gap-space-xs pt-space-xs">
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm text-outline">Blood Type</span>
+<span class="font-title-md text-title-md text-primary mt-0.5">A+</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm text-outline">Height</span>
+<span class="font-title-md text-title-md text-on-surface mt-0.5">5'7"</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-[10px]">170 cm</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm text-outline">Weight</span>
+<span class="font-title-md text-title-md text-on-surface mt-0.5">138 lbs</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-[10px]">62.5 kg</span>
+</div>
+</div>
+<!-- Emergency Contact Subcard -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase font-bold tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-error">e911_emergency</span>
+                Emergency Contact
+              </span>
+<button class="font-label-sm text-label-sm text-primary hover:underline font-semibold">Edit</button>
+</div>
+<div class="flex items-center justify-between mt-1">
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold">David Jenkins</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Spouse • +1 (555) 019-2834</p>
+</div>
+<a class="w-9 h-9 rounded-full bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center shadow-sm" href="tel:+15550192834">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Active Health Conditions & Allergies Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">cardiology</span>
+<h3 class="font-title-md text-title-md text-on-surface">Clinical Profile</h3>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:text-primary-container font-semibold flex items-center gap-0.5" id="add-condition-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span> Add
+            </button>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Diagnosed Conditions</span>
+<div class="flex flex-wrap gap-space-xs">
+<span class="px-space-sm py-1 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Mild Asthma (Active)
+              </span>
+<span class="px-space-sm py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Seasonal Pollen Rhinitis
+              </span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Daily Regimen</span>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-2 py-0.5 rounded-full">2 Active</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">pill</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface leading-tight">Albuterol HFA</p>
+<p class="font-label-sm text-label-sm text-outline">90mcg Inhaler • As needed</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">PRN</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">pill</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface leading-tight">Cetirizine HCl</p>
+<p class="font-label-sm text-label-sm text-outline">10mg Tablet • 09:00 PM</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Daily</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Encrypted Cloud Vault Summary -->
+<div class="bg-gradient-to-br from-surface-container-lowest via-surface-container-low to-surface-container rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">encrypted</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Data Vault</h3>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">Zero-Knowledge AES-256</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Allocated Storage</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">1.2 GB <span class="text-outline font-normal">/ 10 GB</span></span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 12%;"></div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">cloud_done</span> 48 PDF Lab Records
+            </span>
+<span>Auto-backup: ON</span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: 8 COLS (Settings, Appearance, Notifications, Privacy, Export) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- SECTION 1: Appearance & Theme Customizer -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary-fixed/40 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">palette</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Appearance &amp; Visual Physics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Adjust surface illumination and ergonomic color spectrum</p>
+</div>
+</div>
+</div>
+<!-- Mode Selectors -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<!-- Light Mode Selected -->
+<button class="theme-mode-btn active flex items-center justify-between p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all text-left group ring-2 ring-primary" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[22px] text-primary">light_mode</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-bold">Luminous Light</p>
+<p class="font-label-sm text-label-sm text-outline">Vitality morning warmth</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+</button>
+<!-- Dark Mode -->
+<button class="theme-mode-btn flex items-center justify-between p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all text-left opacity-80 group" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[22px] text-on-surface-variant">dark_mode</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-bold">Deep Slate</p>
+<p class="font-label-sm text-label-sm text-outline">Reduced melatonin disruption</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px] opacity-0 group-hover:opacity-100 transition-opacity">circle</span>
+</button>
+<!-- System Mode -->
+<button class="theme-mode-btn flex items-center justify-between p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all text-left opacity-80 group" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[22px] text-on-surface-variant">devices</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-bold">Circadian Sync</p>
+<p class="font-label-sm text-label-sm text-outline">Follows system clock</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px] opacity-0 group-hover:opacity-100 transition-opacity">circle</span>
+</button>
+</div>
+<!-- Accent Hue Swatches -->
+<div class="pt-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-semibold">Primary Biometric Tint</p>
+<p class="font-label-sm text-label-sm text-outline">Calibrates visual tone across charts, dials, and telemetry graphs</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<!-- Mint Emerald (Active) -->
+<button aria-label="Emerald Green Accent" class="hue-swatch relative w-9 h-9 rounded-full bg-primary flex items-center justify-center ring-2 ring-offset-2 ring-primary" type="button">
+<span class="material-symbols-outlined text-on-primary text-[18px]">check</span>
+</button>
+<!-- Ocean Teal -->
+<button aria-label="Ocean Teal Accent" class="hue-swatch w-9 h-9 rounded-full bg-secondary hover:scale-105 transition-transform flex items-center justify-center text-transparent hover:text-white" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<!-- Deep Sky Blue -->
+<button aria-label="Deep Blue Accent" class="hue-swatch w-9 h-9 rounded-full bg-tertiary hover:scale-105 transition-transform flex items-center justify-center text-transparent hover:text-white" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<!-- Coral Vitality -->
+<button aria-label="Coral Crimson Accent" class="hue-swatch w-9 h-9 rounded-full bg-[#f43f5e] hover:scale-105 transition-transform flex items-center justify-center text-transparent hover:text-white" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+</div>
+</section>
+<!-- SECTION 2: Notifications & Circadian Rhythm -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Notifications &amp; Circadian Protocol</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Control timing, auditory tone, and urgency hierarchy for vital reminders</p>
+</div>
+</div>
+<div class="space-y-space-sm pt-space-xs">
+<!-- Toggle 1: Immediate Medication Alarms -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex items-start gap-space-sm max-w-lg">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">medication</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-bold">Critical Prescription Alarms</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Overrides silent mode for scheduled therapeutic doses (Albuterol, Cetirizine)</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 2: Hydration & Movement Nudges -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex items-start gap-space-sm max-w-lg">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5">water_drop</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-bold">Bio-Fluid &amp; Posture Gentle Nudges</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Micro-pings spaced across desk-bound periods when heart rate variability drops</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Selector: Sound Chime -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-md rounded-xl bg-surface-container-low gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[22px] mt-0.5">graphic_eq</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-bold">Harmonic Reminder Chime</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Acoustic waveform designed to prevent startle reflex</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<select class="bg-surface-container-lowest text-on-surface font-label-lg text-label-lg rounded-lg px-3 py-2 border-0 focus:ring-2 focus:ring-secondary focus:outline-none shadow-sm">
+<option selected="">Luminous Harp (Soft Harmonic)</option>
+<option>Tibetan Sing Bowl (432 Hz)</option>
+<option>Morning Dewdrop (Subtle Pulse)</option>
+<option>Clinical Discrete (Single Tap)</option>
+</select>
+<button aria-label="Play sound preview" class="w-9 h-9 rounded-full bg-surface-container hover:bg-surface-container-highest flex items-center justify-center text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Quiet Hours Window -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-md rounded-xl bg-surface-container-low gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">bedtime</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-bold">Deep Rest Sanctuary (Quiet Hours)</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Mutes non-vital telemetry alerts during REM consolidation windows</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm px-space-sm py-1 bg-surface-container-highest text-on-surface-variant rounded-md font-mono">10:00 PM – 07:00 AM</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Privacy, Sensors & Permissions -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed/60 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">security</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Privacy, Sensors &amp; Hardware Access</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Direct continuous biometric streaming conduits and sanitization shields</p>
+</div>
+</div>
+<div class="space-y-space-sm pt-space-xs">
+<!-- HealthKit Sync -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex items-start gap-space-sm max-w-lg">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">sync_alt</span>
+<div>
+<div class="flex items-center gap-2">
+<p class="font-label-lg text-label-lg text-on-surface font-bold">Apple HealthKit &amp; Wearable Telemetry</p>
+<span class="font-label-sm text-label-sm bg-primary-fixed/40 text-on-primary-fixed-variant px-1.5 py-0.2 rounded font-semibold text-[11px]">Continuous</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Syncs resting heart rate, SpO2, sleep stages, and VO2 max every 15 minutes</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Biometric Login -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex items-start gap-space-sm max-w-lg">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5">fingerprint</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-bold">Biometric FaceID / TouchID Unlock</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Requires cryptographic biometric signature to open lab summaries &amp; AI chat logs</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Environmental UV & Pollen Index -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex items-start gap-space-sm max-w-lg">
+<span class="material-symbols-outlined text-tertiary text-[22px] mt-0.5">air</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-bold">Environmental Asthmatic Risk Index</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Uses coarse GPS location to fetch hyper-local pollen counts, AQI, and barometric drops</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- AI Telemetry Anonymization Shield -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex items-start gap-space-sm max-w-lg">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">shield_person</span>
+<div>
+<div class="flex items-center gap-2">
+<p class="font-label-lg text-label-lg text-on-surface font-bold">AI Differential Privacy Shield</p>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-1.5 py-0.2 rounded font-semibold text-[11px]">Strict</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Cryptographically strips names, SSN, IP, and location before prompts reach LLM inference</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Data Management & Institutional Export -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">download_for_offline</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Data Sovereignty &amp; Clinical Records</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Download certified physician records or retrieve your total telemetry archive</p>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Export Card 1: PDF Clinical Record -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]">picture_as_pdf</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold">Clinical Health Dossier</h4>
+<p class="font-label-sm text-label-sm text-outline">Physician-ready summary including 90-day BP trends, active meds, and lab values</p>
+</div>
+</div>
+<button class="w-full py-2.5 px-space-md rounded-full bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg transition-all flex items-center justify-center gap-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Export Medical Summary (PDF)</span>
+</button>
+</div>
+<!-- Export Card 2: JSON Raw Archive -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest text-secondary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]">data_object</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold">Raw Biometric Archive</h4>
+<p class="font-label-sm text-label-sm text-outline">Full time-series JSON dump conforming to HL7 FHIR standard specification</p>
+</div>
+</div>
+<button class="w-full py-2.5 px-space-md rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-label-lg text-label-lg transition-all flex items-center justify-center gap-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Download All Health Data (JSON)</span>
+</button>
+</div>
+</div>
+<!-- Danger Zone: Account Deletion -->
+<div class="mt-space-sm pt-space-md bg-error-container/20 rounded-xl p-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-error text-[24px]">warning</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-bold">Permanent Account Erasure</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Purges all encrypted biometric logs, historical lab reports, and AI memory models.</p>
+</div>
+</div>
+<button class="whitespace-nowrap px-space-md py-2 rounded-full bg-surface-container-lowest text-error hover:bg-error hover:text-on-error font-label-lg text-label-lg transition-all shadow-sm" id="open-delete-modal" type="button">
+              Delete HealthMate Account
+            </button>
+</div>
+</section>
+</div>
+</div>
+</div>
+<!-- Logout Confirmation Modal (Hidden by default) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden flex items-center justify-center p-space-md" id="logout-modal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-md w-full p-space-lg shadow-2xl flex flex-col gap-space-md animate-in fade-in zoom-in-95 duration-200">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">logout</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Confirm Session Logout</h3>
+<p class="font-label-sm text-label-sm text-outline">HealthMate AI</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Are you sure you want to log out? Live telemetry ingestion will continue securely on your connected wearable devices, but active notifications on this client will pause.
+      </p>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-all" id="cancel-logout" type="button">
+          Cancel
+        </button>
+<button class="px-space-lg py-2 rounded-full bg-error text-on-error hover:opacity-90 font-label-lg text-label-lg transition-all shadow-sm" id="confirm-logout" type="button">
+          Log Out
+        </button>
+</div>
+</div>
+</div>
+<!-- Delete Account Confirmation Modal (Hidden by default) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden flex items-center justify-center p-space-md" id="delete-modal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-lg w-full p-space-lg shadow-2xl flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-error-container text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">delete_forever</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-error">Irreversible Action</h3>
+<p class="font-label-sm text-label-sm text-outline">Cryptographic Shred Protocol</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        This will immediately execute HIPAA-compliant cryptographic destruction of Sarah Jenkins's private key. All vitals telemetry, ECG recordings, medication compliance history, and AI diagnostic chat threads will become completely unrecoverable.
+      </p>
+<div class="p-space-sm rounded-lg bg-surface-container-low font-label-sm text-label-sm text-outline flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+<span>A final archive snapshot will NOT be retained by HealthMate servers.</span>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-all" id="cancel-delete" type="button">
+          Keep Account Safe
+        </button>
+<button class="px-space-lg py-2 rounded-full bg-error text-on-error hover:opacity-90 font-label-lg text-label-lg transition-all shadow-sm" id="confirm-delete" type="button">
+          Yes, Destroy All Data
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Interactive Modal Handlers
+  const logoutModal = document.getElementById('logout-modal');
+  const openLogoutBtn = document.getElementById('open-logout-modal');
+  const cancelLogoutBtn = document.getElementById('cancel-logout');
+  const confirmLogoutBtn = document.getElementById('confirm-logout');
+
+  const deleteModal = document.getElementById('delete-modal');
+  const openDeleteBtn = document.getElementById('open-delete-modal');
+  const cancelDeleteBtn = document.getElementById('cancel-delete');
+  const confirmDeleteBtn = document.getElementById('confirm-delete');
+
+  if (openLogoutBtn && logoutModal) {
+    openLogoutBtn.addEventListener('click', () => logoutModal.classList.remove('hidden'));
+    cancelLogoutBtn.addEventListener('click', () => logoutModal.classList.add('hidden'));
+    confirmLogoutBtn.addEventListener('click', () => {
+      logoutModal.classList.add('hidden');
+      alert('Secure session closed. Returning to authenticated login gateway.');
+    });
+  }
+
+  if (openDeleteBtn && deleteModal) {
+    openDeleteBtn.addEventListener('click', () => deleteModal.classList.remove('hidden'));
+    cancelDeleteBtn.addEventListener('click', () => deleteModal.classList.add('hidden'));
+    confirmDeleteBtn.addEventListener('click', () => {
+      deleteModal.classList.add('hidden');
+      alert('Cryptographic key deletion dispatched. Account marked for immediate purge.');
+    });
+  }
+
+  // Hue Swatch Toggle Interactive Polish
+  const swatches = document.querySelectorAll('.hue-swatch');
+  swatches.forEach(swatch => {
+    swatch.addEventListener('click', () => {
+      swatches.forEach(s => {
+        s.classList.remove('ring-2', 'ring-offset-2', 'ring-primary');
+        const icon = s.querySelector('.material-symbols-outlined');
+        if (icon) icon.classList.add('text-transparent');
+      });
+      swatch.classList.add('ring-2', 'ring-offset-2', 'ring-primary');
+      const activeIcon = swatch.querySelector('.material-symbols-outlined');
+      if (activeIcon) {
+        activeIcon.classList.remove('text-transparent');
+        activeIcon.classList.add('text-white');
+      }
+    });
+  });
+
+  // Theme Mode Selectors Polish
+  const themeBtns = document.querySelectorAll('.theme-mode-btn');
+  themeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      themeBtns.forEach(b => {
+        b.classList.remove('ring-2', 'ring-primary', 'active');
+        b.classList.add('opacity-80');
+        const icon = b.querySelectorAll('.material-symbols-outlined')[1];
+        if (icon) {
+          icon.textContent = 'circle';
+          icon.classList.remove('text-primary');
+          icon.classList.add('text-outline');
+        }
+      });
+      btn.classList.add('ring-2', 'ring-primary', 'active');
+      btn.classList.remove('opacity-80');
+      const activeIcon = btn.querySelectorAll('.material-symbols-outlined')[1];
+      if (activeIcon) {
+        activeIcon.textContent = 'check_circle';
+        activeIcon.classList.remove('text-outline');
+        activeIcon.classList.add('text-primary');
+      }
+    });
+  });
+
+  // Add condition quick trigger
+  const addConditionBtn = document.getElementById('add-condition-btn');
+  if (addConditionBtn) {
+    addConditionBtn.addEventListener('click', () => {
+      const condition = prompt('Enter diagnosed health condition or allergy:', 'Latex Allergy');
+      if (condition) {
+        alert('Condition "' + condition + '" registered to Sarah Jenkins EHR dossier.');
+      }
+    });
+  }
+</script></main></div></body></html>

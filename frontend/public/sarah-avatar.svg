@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" fill="none">
+  <defs>
+    <linearGradient id="avatar-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#85f8c4" />
+      <stop offset="50%" stop-color="#68dba9" />
+      <stop offset="100%" stop-color="#00855d" />
+    </linearGradient>
+    <linearGradient id="avatar-face" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffebd4" />
+      <stop offset="100%" stop-color="#f5d3b3" />
+    </linearGradient>
+    <linearGradient id="avatar-hair" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5a3d28" />
+      <stop offset="100%" stop-color="#382416" />
+    </linearGradient>
+  </defs>
+  <!-- Background circle with vitality glass border -->
+  <circle cx="40" cy="40" r="39" fill="url(#avatar-bg)" stroke="#85f8c4" stroke-width="2" />
+  <!-- Hair back -->
+  <path d="M22 42c0-14 8-22 18-22s18 8 18 22v10H22V42z" fill="url(#avatar-hair)" />
+  <!-- Shoulders / Blouse in soft teal -->
+  <path d="M16 75c3-16 14-20 24-20s21 4 24 20" fill="#006948" />
+  <path d="M34 55h12v10H34z" fill="url(#avatar-face)" />
+  <!-- Neck shadow -->
+  <path d="M36 55h8v4h-8z" fill="#000000" opacity="0.08" />
+  <!-- Face -->
+  <path d="M28 36c0-7 5.4-13 12-13s12 6 12 13c0 7-5.4 12-12 12s-12-5-12-12z" fill="url(#avatar-face)" />
+  <!-- Hair front style -->
+  <path d="M26 34c2-9 7-14 14-14 8 0 13 4 15 10-4-3-9-4-15-2-5 2-9 7-14 6z" fill="url(#avatar-hair)" />
+  <path d="M27 34c2 6 2 12 1 15-2-4-2-10-1-15z" fill="url(#avatar-hair)" />
+  <!-- Eyes -->
+  <circle cx="35" cy="36" r="1.8" fill="#382416" />
+  <circle cx="45" cy="36" r="1.8" fill="#382416" />
+  <!-- Cheeks -->
+  <circle cx="32" cy="41" r="2.2" fill="#ff9999" opacity="0.4" />
+  <circle cx="48" cy="41" r="2.2" fill="#ff9999" opacity="0.4" />
+  <!-- Gentle Smile -->
+  <path d="M36.5 42c1.5 2 5.5 2 7 0" stroke="#a0522d" stroke-width="1.6" stroke-linecap="round" />
+</svg>

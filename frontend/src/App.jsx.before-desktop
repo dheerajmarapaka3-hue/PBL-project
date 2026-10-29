@@ -1,0 +1,99 @@
+﻿import { useEffect, useRef } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+
+const screens = {
+  "/": "welcome_onboarding",
+  "/welcome": "welcome_onboarding",
+  "/dashboard": "personalized_health_dashboard",
+  "/assistant": "ai_health_assistant",
+  "/tracking": "health_tracking",
+  "/reports": "medical_reports_prescriptions",
+  "/medicines": "medicines_reminders",
+  "/routines": "daily_routines_goals",
+  "/workouts": "exercise_workouts",
+  "/nutrition": "nutrition_food_diary",
+  "/meditation": "meditation_yoga",
+  "/profile": "profile_settings",
+};
+
+const aliases = {
+  "welcome-onboarding": "/welcome",
+  "personalized-health-dashboard": "/dashboard",
+  "ai-health-assistant": "/assistant",
+  "health-tracking": "/tracking",
+  "medical-reports-prescriptions": "/reports",
+  "medicines-reminders": "/medicines",
+  "daily-routines-goals": "/routines",
+  "exercise-workouts": "/workouts",
+  "nutrition-food-diary": "/nutrition",
+  "meditation-yoga": "/meditation",
+  "profile-settings": "/profile",
+};
+
+export default function App() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const frame = useRef(null);
+
+  const screen = screens[location.pathname] || screens["/dashboard"];
+  const source = `/stitch-source/${screen}/code.html`;
+
+  useEffect(() => {
+    const iframe = frame.current;
+    if (!iframe) return;
+
+    const connectNavigation = () => {
+      try {
+        const doc = iframe.contentDocument;
+        if (!doc) return;
+
+        doc.addEventListener("click", (event) => {
+          const element = event.target.closest("a, [data-path]");
+          if (!element) return;
+
+          const rawPath =
+            element.getAttribute("data-path") ||
+            element.getAttribute("href");
+
+          if (!rawPath || rawPath === "#") return;
+
+          const cleanPath = rawPath
+            .replace(/^\/+|\/+$/g, "")
+            .replace(/\.html$/i, "");
+
+          const route =
+            aliases[cleanPath] ||
+            (Object.values(screens).includes(cleanPath)
+              ? aliases[cleanPath.replaceAll("_", "-")]
+              : null);
+
+          if (route) {
+            event.preventDefault();
+            navigate(route);
+          }
+        });
+      } catch (error) {
+        console.warn("Screen navigation setup:", error);
+      }
+    };
+
+    iframe.addEventListener("load", connectNavigation);
+    return () => iframe.removeEventListener("load", connectNavigation);
+  }, [source, navigate]);
+
+  return (
+    <iframe
+      key={source}
+      ref={frame}
+      title={screen.replaceAll("_", " ")}
+      src={source}
+      style={{
+        display: "block",
+        width: "100%",
+        height: "100dvh",
+        border: 0,
+        background: "#faf8ff",
+      }}
+    />
+  );
+}

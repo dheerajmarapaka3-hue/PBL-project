@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#faf8ff;font-family:'Plus Jakarta Sans',sans-serif;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'surface-container-lowest': '#ffffff', 'on-primary-fixed-variant': '#005137', 'error': '#ba1a1a', 'background': '#faf8ff', 'tertiary-container': '#007bb9', 'surface-container-high': '#e2e7ff', 'on-tertiary': '#ffffff', 'on-secondary-fixed-variant': '#005049', 'tertiary-fixed': '#cce5ff', 'on-secondary-fixed': '#00201d', 'surface': '#faf8ff', 'on-tertiary-container': '#fdfcff', 'on-primary-container': '#f5fff7', 'outline': '#6d7a72', 'surface-container-highest': '#dae2fd', 'error-container': '#ffdad6', 'surface-dim': '#d2d9f4', 'on-secondary': '#ffffff', 'inverse-surface': '#283044', 'surface-bright': '#faf8ff', 'on-background': '#131b2e', 'on-surface': '#131b2e', 'secondary-fixed': '#89f5e7', 'surface-container': '#eaedff', 'primary-fixed-dim': '#68dba9', 'secondary': '#006a61', 'on-primary-fixed': '#002114', 'surface-container-low': '#f2f3ff', 'on-error': '#ffffff', 'secondary-container': '#86f2e4', 'surface-variant': '#dae2fd', 'on-tertiary-fixed': '#001d31', 'on-secondary-container': '#006f66', 'secondary-fixed-dim': '#6bd8cb', 'primary-fixed': '#85f8c4', 'on-surface-variant': '#3d4a42', 'surface-tint': '#006c4a', 'on-primary': '#ffffff', 'on-tertiary-fixed-variant': '#004b73', 'primary-container': '#00855d', 'tertiary-fixed-dim': '#93ccff', 'inverse-on-surface': '#eef0ff', 'outline-variant': '#bccac0', 'tertiary': '#006194', 'primary': '#006948', 'inverse-primary': '#68dba9', 'on-error-container': '#93000a' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, 'spacing': { 'gutter-tablet': '1.5rem', 'margin-tablet': '2rem', 'space-xs': '0.25rem', 'space-xl': '2rem', 'space-md': '1rem', 'space-sm': '0.5rem', 'space-lg': '1.5rem', 'gutter': '1rem', 'gutter-desktop': '2rem', 'margin-desktop': '3rem', 'margin': '1.25rem' }, 'fontFamily': { 'title-md': ['Plus Jakarta Sans'], 'label-sm': ['Plus Jakarta Sans'], 'body-md': ['Plus Jakarta Sans'], 'headline-lg': ['Plus Jakarta Sans'], 'headline-lg-mobile': ['Plus Jakarta Sans'], 'display-lg': ['Plus Jakarta Sans'], 'metric-val': ['Plus Jakarta Sans'], 'display-lg-mobile': ['Plus Jakarta Sans'], 'label-lg': ['Plus Jakarta Sans'], 'headline-sm': ['Plus Jakarta Sans'], 'headline-md': ['Plus Jakarta Sans'], 'body-lg': ['Plus Jakarta Sans'] }, 'fontSize': { 'title-md': ['18px', { lineHeight: '26px', fontWeight: '600' }], 'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '600' }], 'body-md': ['14px', { lineHeight: '22px', fontWeight: '400' }], 'headline-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.02em', fontWeight: '700' }], 'headline-lg-mobile': ['26px', { lineHeight: '34px', letterSpacing: '-0.015em', fontWeight: '700' }], 'display-lg': ['44px', { lineHeight: '52px', letterSpacing: '-0.03em', fontWeight: '800' }], 'metric-val': ['28px', { lineHeight: '32px', letterSpacing: '-0.02em', fontWeight: '800' }], 'display-lg-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.025em', fontWeight: '800' }], 'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.01em', fontWeight: '600' }], 'headline-sm': ['20px', { lineHeight: '28px', letterSpacing: '-0.01em', fontWeight: '600' }], 'headline-md': ['24px', { lineHeight: '32px', letterSpacing: '-0.015em', fontWeight: '700' }], 'body-lg': ['16px', { lineHeight: '24px', fontWeight: '500' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="HealthMate AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WkjYXO5BsejvLcP5h1BCv-teLj5Rs5dMUd_OKBkW7gN66x-Z-t_HSWcRb2IO1kw9rR40GgqcKUgCOrzseMT98JIXu3Pcne8oA1pjSHFtuEvXUQuL_MWMZWLmBzDOol8KJNgQ3opKFvFamB-L3NTih46TkOAuj7B6k5RmjGPwWh1LKKZ6xaYf2zO8mwl5SRLBaRRnsf6lyR_LtE-G0RtkvP2nkIZNOvKGjs8uogrx4d7h5BQGgJ_o-0Ru0"/><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface font-bold">HealthMate</span><span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm shadow-[0_2px_8px_-2px_rgba(0,105,72,0.25)]">AI</span></div><span class="hidden">Personalized Health Dashboard</span></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-95 relative"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><a aria-label="View Profile" class="w-11 h-11 flex items-center justify-center rounded-full active:scale-95 transition-transform ring-2 ring-primary/20" data-path="profile-settings" href="#"><img alt="User Avatar" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTrSMstl4QgLEPtgX9w1QZ7oYkq4tBFy9IkeTRMshGffPRyof9YgZaXgQPaqnIpLH6SWQULBYswSEzIiYP1c8LUukigUWf4DaixIXXQIfK1k6R-IDAOzy6rhzFo4GVES8kaWE9hylUCizFGX5L--mdaqzwet35VXVqYJ_AYqEaYYezLUaAV66MEWGvtBH3ChjwdHiTAnUiW7Ghy1mexFpAeoj37vfeUGPzyenGBEeat-r6bNqO1u62"/></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full pb-8">
+<div class="px-margin pt-4 pb-2">
+<div class="bg-surface-container-high rounded-full px-3 py-1 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[16px] animate-pulse">info</span>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Demonstration Data • Non-Diagnostic Analytics</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold shrink-0 pl-2">v2.4 Demo</span>
+</div>
+</div>
+<div class="px-margin mt-2 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[18px]">sync</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Sync: Real-time via HealthKit</span>
+</div>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold">Active Feed</span>
+</div>
+<div class="px-margin mt-4">
+<div class="bg-surface-container-low p-1 rounded-full flex items-center justify-between">
+<button class="timeframe-btn flex-1 py-1.5 rounded-full font-label-lg text-label-lg text-on-surface-variant transition-all text-center" data-timeframe="daily">Daily</button>
+<button class="timeframe-btn flex-1 py-1.5 rounded-full font-label-lg text-label-lg bg-primary text-on-primary shadow-sm transition-all text-center" data-timeframe="weekly">Weekly</button>
+<button class="timeframe-btn flex-1 py-1.5 rounded-full font-label-lg text-label-lg text-on-surface-variant transition-all text-center" data-timeframe="monthly">Monthly</button>
+</div>
+</div>
+<div class="mt-4 overflow-x-auto no-scrollbar px-margin flex items-center gap-2">
+<button class="metric-filter-chip bg-tertiary text-on-tertiary px-3.5 py-1.5 rounded-full font-label-sm text-label-sm shrink-0 flex items-center gap-1 shadow-sm transition-transform active:scale-95" data-filter="all">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>All Metrics</span>
+</button>
+<button class="metric-filter-chip bg-surface-container-low text-on-surface-variant px-3.5 py-1.5 rounded-full font-label-sm text-label-sm shrink-0 flex items-center gap-1 transition-transform active:scale-95" data-filter="vitals">
+<span class="material-symbols-outlined text-[16px]">monitor_heart</span>
+<span>Vitals</span>
+</button>
+<button class="metric-filter-chip bg-surface-container-low text-on-surface-variant px-3.5 py-1.5 rounded-full font-label-sm text-label-sm shrink-0 flex items-center gap-1 transition-transform active:scale-95" data-filter="sleep">
+<span class="material-symbols-outlined text-[16px]">bedtime</span>
+<span>Sleep</span>
+</button>
+<button class="metric-filter-chip bg-surface-container-low text-on-surface-variant px-3.5 py-1.5 rounded-full font-label-sm text-label-sm shrink-0 flex items-center gap-1 transition-transform active:scale-95" data-filter="activity">
+<span class="material-symbols-outlined text-[16px]">directions_run</span>
+<span>Hydration &amp; Weight</span>
+</button>
+<button class="metric-filter-chip bg-surface-container-low text-on-surface-variant px-3.5 py-1.5 rounded-full font-label-sm text-label-sm shrink-0 flex items-center gap-1 transition-transform active:scale-95" data-filter="symptoms">
+<span class="material-symbols-outlined text-[16px]">healing</span>
+<span>Symptoms</span>
+</button>
+</div>
+<div class="px-margin mt-4 flex flex-col gap-4">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden" data-metric-type="sleep">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">bedtime</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Sleep Architecture</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">7-Day Stage Dispersion &amp; Recovery</p>
+</div>
+<div class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">watch</span>
+<span>Apple Watch Series 9</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline justify-between">
+<div>
+<span class="font-metric-val text-metric-val text-on-surface">7h 48m</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold ml-1.5">+24m vs prior week</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-primary text-[16px]">stars</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Sleep Score: 89</span>
+</div>
+</div>
+<div class="mt-3">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-1">
+<span>Mon - Sun Architecture</span>
+<span class="text-primary font-medium">88% Target Reached</span>
+</div>
+<div class="w-full h-8 rounded-full bg-surface-container flex overflow-hidden p-0.5">
+<div class="h-full bg-tertiary rounded-l-full relative group cursor-pointer transition-all" style="width: 22%;">
+<div class="absolute inset-0 flex items-center justify-center font-label-sm text-label-sm text-on-tertiary">22%</div>
+</div>
+<div class="h-full bg-secondary relative group cursor-pointer transition-all" style="width: 26%;">
+<div class="absolute inset-0 flex items-center justify-center font-label-sm text-label-sm text-on-secondary">26%</div>
+</div>
+<div class="h-full bg-primary-fixed-dim rounded-r-full relative group cursor-pointer transition-all" style="width: 52%;">
+<div class="absolute inset-0 flex items-center justify-center font-label-sm text-label-sm text-on-surface">52%</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-2 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary inline-block"></span>
+<span>Deep (1h 42m)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary inline-block"></span>
+<span>REM (2h 02m)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-fixed-dim inline-block"></span>
+<span>Light (4h 04m)</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 bg-surface-container-low rounded-lg p-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">auto_awesome</span>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate">High Quality REM Period</p>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">Optimal cognitive refresh logged between 3:20 AM - 5:10 AM</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm" data-metric-type="vitals">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-error text-[20px]">favorite</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Resting Heart Rate &amp; HRV</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Autonomic Nervous System Recovery Window</p>
+</div>
+<div class="bg-surface-container-high text-on-surface px-2 py-0.5 rounded-full font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sensors</span>
+<span>Oura Ring Gen 3</span>
+</div>
+</div>
+<div class="mt-4 grid grid-cols-2 gap-3">
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Resting HR (7-Day Avg)</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-metric-val text-metric-val text-on-surface">54</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">bpm</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold ml-auto">-2 bpm</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">HRV Balance (rMSSD)</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-metric-val text-metric-val text-on-surface">62</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ms</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold ml-auto">Optimal</span>
+</div>
+</div>
+</div>
+<div class="mt-4">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-1.5">
+<span>7-Day Biometric Trend</span>
+<span class="text-secondary font-medium">Resting Baseline Zone (52 - 58 bpm)</span>
+</div>
+<div class="w-full h-24 relative flex items-end justify-between px-2 pt-4 bg-surface-container-low rounded-lg overflow-hidden">
+<div class="absolute inset-x-0 bottom-4 h-9 bg-primary-fixed/20 pointer-events-none"></div>
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-2.5 rounded-full bg-secondary transition-all" style="height: 48px;"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">M</span>
+</div>
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-2.5 rounded-full bg-secondary transition-all" style="height: 52px;"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">T</span>
+</div>
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-2.5 rounded-full bg-primary transition-all" style="height: 40px;"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">W</span>
+</div>
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-2.5 rounded-full bg-secondary transition-all" style="height: 44px;"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">T</span>
+</div>
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-2.5 rounded-full bg-primary transition-all" style="height: 38px;"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">F</span>
+</div>
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-2.5 rounded-full bg-secondary transition-all" style="height: 46px;"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">S</span>
+</div>
+<div class="flex flex-col items-center gap-1 z-10">
+<div class="w-2.5 rounded-full bg-secondary transition-all" style="height: 42px;"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold text-primary">S</span>
+</div>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-2 text-right">Trend observations do not replace clinical electrocardiograms.</p>
+</div>
+<div class="grid grid-cols-2 gap-3" data-metric-type="activity">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-tertiary text-[20px]">water_drop</span>
+<span class="bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-full font-label-sm text-label-sm">Manual Log</span>
+</div>
+<div class="mt-2">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Hydration Vol.</p>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-metric-val text-metric-val text-on-surface">2,450</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 3,000ml</span>
+</div>
+</div>
+</div>
+<div class="mt-3">
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 82%;"></div>
+</div>
+<div class="flex justify-between items-center mt-1.5">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">82% Daily Goal</span>
+<button class="bg-tertiary-fixed text-on-tertiary-fixed-variant w-6 h-6 rounded-full flex items-center justify-center active:scale-95 transition-transform" id="add-water-btn">
+<span class="material-symbols-outlined text-[14px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-secondary text-[20px]">monitor_weight</span>
+<span class="bg-secondary-container text-on-secondary-container px-1.5 py-0.5 rounded-full font-label-sm text-label-sm">Withings Scale</span>
+</div>
+<div class="mt-2">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Weight Telemetry</p>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-metric-val text-metric-val text-on-surface">71.4</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">kg</span>
+</div>
+</div>
+</div>
+<div class="mt-3">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Milestone: 70.0 kg</span>
+<span class="text-primary font-semibold">-0.6 kg</span>
+</div>
+<div class="w-full h-6 mt-1 flex items-end gap-1">
+<span class="flex-1 bg-surface-container-high rounded-t" style="height: 80%;"></span>
+<span class="flex-1 bg-surface-container-high rounded-t" style="height: 75%;"></span>
+<span class="flex-1 bg-surface-container-high rounded-t" style="height: 78%;"></span>
+<span class="flex-1 bg-surface-container-high rounded-t" style="height: 70%;"></span>
+<span class="flex-1 bg-primary rounded-t" style="height: 65%;"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm" data-metric-type="symptoms">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">fact_check</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Daily Symptoms Tracker</span>
+</div>
+<button class="bg-primary text-on-primary px-3 py-1 rounded-full font-label-sm text-label-sm flex items-center gap-1 shadow-sm active:scale-95 transition-transform" id="open-symptom-modal">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Log New</span>
+</button>
+</div>
+<div class="mt-3 flex flex-wrap gap-2" id="symptoms-container">
+<div class="bg-surface-container-low px-3 py-1.5 rounded-full flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Mild Joint Stiffness</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm px-1.5 rounded-full">Resolved</span>
+</div>
+<div class="bg-surface-container-low px-3 py-1.5 rounded-full flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Energy Dip (3:00 PM)</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm px-1.5 rounded-full">Logged</span>
+</div>
+<div class="bg-surface-container-low px-3 py-1.5 rounded-full flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Post-Run Tightness (Hamstrings)</span>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-1.5 rounded-full">Mild</span>
+</div>
+</div>
+<div class="mt-3 bg-surface-container-low p-2.5 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">psychology</span>
+<p class="font-body-md text-body-md text-on-surface-variant">HealthMate correlation: 3 PM energy drops frequently follow low hydration mornings.</p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">download</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold">Telemetry Data Export</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Export continuous records for clinical consultations</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex-1 bg-surface-container-lowest text-on-surface hover:text-primary py-2 px-3 rounded-full font-label-sm text-label-sm flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all" id="export-csv-btn">
+<span class="material-symbols-outlined text-[16px]">table_view</span>
+<span>Download CSV</span>
+</button>
+<button class="flex-1 bg-primary text-on-primary py-2 px-3 rounded-full font-label-sm text-label-sm flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all" id="export-pdf-btn">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Generate Clinician PDF</span>
+</button>
+</div>
+<p class="hidden font-label-sm text-label-sm text-primary text-center" id="export-status-banner">Preparing clinical archive report...</p>
+</div>
+<div class="rounded-xl overflow-hidden shadow-sm relative">
+<img class="w-full h-32 object-cover" data-alt="A clean, minimalist Scandinavian-inspired wellness setting featuring an apple, smart band sensor resting beside a glass carafe of pure spring water bathed in warm morning daylight with delicate green botanicals" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdbbVJTBLr0IcCJP-0QM5vUXhTQbUxr6qjLb65LUtu_reCPHdEFk2f-gDil472nyg3lshYevkz5wY8xYg99s5gEYaMzX-v7NeEC-0dJ1QZe9bC0hBfyPGoZ_5kB2RFB5V8lQTR12CBccgeG6xR3lNbPLYxSV-F4iEeDAtnD6JJMgiUn1y9OYgNmHlyIQ351uHcS-O5OGsc3hHukGpPDppeyzn6pSaEEZiULqgVyXrGTToKDTaDkhpC"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent flex items-end p-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">HIPAA &amp; GDPR Compliant Cloud Sandbox</span>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden flex items-end justify-center" id="symptom-sheet">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-t-xl p-space-lg shadow-xl flex flex-col gap-4 animate-in slide-in-from-bottom duration-200">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">stethoscope</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Log Health Observation</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant" id="close-symptom-modal">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Observation or Symptom</label>
+<input class="w-full bg-surface-container-low text-on-surface px-4 py-2.5 rounded-lg outline-none font-body-md text-body-md" id="symptom-input" placeholder="e.g. Mild headache, Brain fog, Fatigue" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Severity &amp; State</label>
+<div class="flex items-center gap-2">
+<button class="severity-choice flex-1 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm" data-severity="Mild">Mild</button>
+<button class="severity-choice flex-1 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm" data-severity="Moderate">Moderate</button>
+<button class="severity-choice flex-1 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm" data-severity="Resolved">Resolved</button>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2 mt-2">
+<button class="px-4 py-2 rounded-full font-label-sm text-label-sm text-on-surface-variant" id="cancel-symptom-btn">Cancel</button>
+<button class="px-5 py-2 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm" id="submit-symptom-btn">Save Log</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initTelemetryInteractions() {
+    const timeframeButtons = document.querySelectorAll('.timeframe-btn');
+    timeframeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        timeframeButtons.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          b.classList.add('text-on-surface-variant');
+        });
+        btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+        btn.classList.remove('text-on-surface-variant');
+      });
+    });
+
+    const filterChips = document.querySelectorAll('.metric-filter-chip');
+    const metricCards = document.querySelectorAll('[data-metric-type]');
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        filterChips.forEach(c => {
+          c.classList.remove('bg-tertiary', 'text-on-tertiary', 'shadow-sm');
+          c.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        });
+        chip.classList.add('bg-tertiary', 'text-on-tertiary', 'shadow-sm');
+        chip.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+
+        const filter = chip.dataset.filter;
+        metricCards.forEach(card => {
+          if (filter === 'all' || card.dataset.metricType === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    const modal = document.getElementById('symptom-sheet');
+    const openBtn = document.getElementById('open-symptom-modal');
+    const closeBtn = document.getElementById('close-symptom-modal');
+    const cancelBtn = document.getElementById('cancel-symptom-btn');
+    const submitBtn = document.getElementById('submit-symptom-btn');
+    const input = document.getElementById('symptom-input');
+    const symptomsContainer = document.getElementById('symptoms-container');
+    let selectedSeverity = 'Mild';
+
+    const severityChoices = document.querySelectorAll('.severity-choice');
+    severityChoices.forEach(sc => {
+      sc.addEventListener('click', () => {
+        severityChoices.forEach(s => {
+          s.classList.remove('bg-primary', 'text-on-primary');
+          s.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        });
+        sc.classList.add('bg-primary', 'text-on-primary');
+        sc.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        selectedSeverity = sc.dataset.severity;
+      });
+    });
+
+    const toggleModal = (show) => {
+      if (show) {
+        modal.classList.remove('hidden');
+      } else {
+        modal.classList.add('hidden');
+        input.value = '';
+      }
+    };
+
+    if (openBtn) openBtn.addEventListener('click', () => toggleModal(true));
+    if (closeBtn) closeBtn.addEventListener('click', () => toggleModal(false));
+    if (cancelBtn) cancelBtn.addEventListener('click', () => toggleModal(false));
+
+    if (submitBtn) {
+      submitBtn.addEventListener('click', () => {
+        const text = input.value.trim();
+        if (text) {
+          const pill = document.createElement('div');
+          pill.className = 'bg-surface-container-low px-3 py-1.5 rounded-full flex items-center gap-2';
+          pill.innerHTML = `
+            <span class="w-2 h-2 rounded-full bg-secondary"></span>
+            <span class="font-label-sm text-label-sm text-on-surface">${text}</span>
+            <span class="bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm px-1.5 rounded-full">${selectedSeverity}</span>
+          `;
+          symptomsContainer.prepend(pill);
+          toggleModal(false);
+        }
+      });
+    }
+
+    const exportCsvBtn = document.getElementById('export-csv-btn');
+    const exportPdfBtn = document.getElementById('export-pdf-btn');
+    const statusBanner = document.getElementById('export-status-banner');
+
+    const handleExport = (type) => {
+      statusBanner.classList.remove('hidden');
+      statusBanner.innerText = `Preparing ${type} export package...`;
+      setTimeout(() => {
+        statusBanner.innerText = `Ready! Biometric data encrypted and transferred.`;
+        setTimeout(() => statusBanner.classList.add('hidden'), 2500);
+      }, 1200);
+    };
+
+    if (exportCsvBtn) exportCsvBtn.addEventListener('click', () => handleExport('CSV'));
+    if (exportPdfBtn) exportPdfBtn.addEventListener('click', () => handleExport('PDF'));
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-xs max-w-lg mx-auto"><a aria-current="page" class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-0.5 transition-all text-primary font-bold" data-path="personalized-health-dashboard" href="#"><span class="material-symbols-outlined text-[24px]">favorite</span><span class="font-label-sm text-label-sm tracking-tight">Today</span></a><a class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-all relative" data-path="ai-health-assistant" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">auto_awesome</span><span class="absolute -top-0.5 -right-1 w-2 h-2 rounded-full bg-secondary-container ring-1.5 ring-surface"></span></div><span class="font-label-sm text-label-sm tracking-tight">AI Mate</span></a><a class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-all" data-path="medicines-reminders" href="#"><span class="material-symbols-outlined text-[24px]">medication</span><span class="font-label-sm text-label-sm tracking-tight">Care</span></a><a class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-all" data-path="nutrition-food-diary" href="#"><span class="material-symbols-outlined text-[24px]">local_fire_department</span><span class="font-label-sm text-label-sm tracking-tight">Activity</span></a><a class="flex-1 flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-all" data-path="profile-settings" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="font-label-sm text-label-sm tracking-tight">Profile</span></a></div></nav></body></html>
